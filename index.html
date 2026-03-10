@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    
+    <title>البحث الأكاديمي: القضية الفلسطينية - بدر البوسعيدي</title>
+    
+    <meta name="description" content="دراسة تحليلية في إطار المواطنة العالمية: يحيى السنوار وعلاقته بمسار القضية الفلسطينية. بحث أكاديمي محكم.">
+    <meta name="keywords" content="القضية الفلسطينية, يحيى السنوار, المواطنة العالمية, حقوق الإنسان, الصراع العربي الإسرائيلي">
+    <meta name="author" content="بدر عبدالله هلال البوسعيدي">
+    <meta property="og:title" content="البحث الأكاديمي: القضية الفلسطينية وتطوراتها">
+    <meta property="og:description" content="دراسة تحليلية في إطار المواطنة العالمية.">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ar_AR">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* ========== المتغيرات العامة (الوضع الفاتح والداكن) ========== */
+        :root {
+            --primary: #115d3a;
+            --primary-dark: #0a3d25;
+            --accent: #a82020;
+            --gold: #cba153;
+            --dark: #1e293b;
+            --bg-site: #f4f2eb; 
+            --bg-card: #ffffff;
+            --text-main: #2b2b2b;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --sidebar-bg: #ffffff;
+            --shadow: 0 20px 40px rgba(0,0,0,0.04);
+        }
+
+        body.dark-mode {
+            --bg-site: #0f172a;
+            --bg-card: #1e293b;
+            --text-main: #e2e8f0;
+            --text-light: #94a3b8;
+            --border: #334155;
+            --primary: #22c55e;
+            --accent: #ef4444;
+            --gold: #fbbf24;
+            --sidebar-bg: #1e293b;
+            --shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Amiri', serif;
+            background-color: var(--bg-site);
+            color: var(--text-main);
+            line-height: 2.1;
+            font-size: 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* ========== شريط تقدم القراءة ========== */
+        .progress-container {
+            position: fixed; top: 0; left: 0; width: 100%; height: 6px; background: transparent; z-index: 9999;
+        }
+        .progress-bar {
+            height: 100%; background: linear-gradient(90deg, var(--accent), var(--gold), var(--primary)); width: 0%;
+            transition: width 0.1s;
+        }
+
+        /* ========== الهيرو (Hero Section) ========== */
+        .hero-section {
+            background: linear-gradient(to bottom, rgba(10, 61, 37, 0.85), rgba(30, 41, 59, 0.95)), 
+                        url('https://images.unsplash.com/photo-1541872703-74c5e44368f9?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat fixed;
+            color: white;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 8px solid var(--gold);
+            position: relative;
+        }
+        
+        .hero-content {
+            position: relative; z-index: 2; max-width: 1000px; margin: 0 auto;
+            opacity: 0; transform: translateY(40px); animation: fadeUp 0.8s ease-out forwards;
+        }
+        @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+        
+        .hero-uni {
+            font-family: 'Tajawal', sans-serif; font-size: 18px; font-weight: 700; color: var(--gold);
+            margin-bottom: 30px; letter-spacing: 1px;
+        }
+        .hero-title {
+            font-family: 'Aref Ruqaa', serif; 
+            font-size: clamp(45px, 6vw, 70px); 
+            font-weight: 700; 
+            line-height: 1.4; 
+            margin-bottom: 15px; 
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+        .hero-subtitle {
+            font-family: 'Tajawal', sans-serif; 
+            font-size: clamp(20px, 3vw, 26px); 
+            font-weight: 300; 
+            color: #e2e8f0; 
+            margin-bottom: 50px; 
+        }
+        
+        .student-badge {
+            background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 20px;
+            padding: 30px 50px; display: inline-block; text-align: right;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+        .student-badge p {
+            font-family: 'Tajawal', sans-serif; margin-bottom: 10px; font-size: 18px;
+            display: flex; align-items: center; gap: 12px;
+        }
+        .student-badge i { color: var(--gold); font-size: 22px;}
+
+        /* ========== الهيكل الرئيسي ========== */
+        .main-wrapper {
+            display: flex; flex-wrap: wrap; max-width: 1400px; margin: 0 auto; padding: 60px 20px; gap: 40px;
+        }
+
+        /* السايدبار (الفهرس الجانبي) */
+        .sidebar {
+            flex: 1 1 300px; max-width: 350px; position: sticky; top: 40px; height: fit-content;
+            background: var(--sidebar-bg); border-radius: 16px; padding: 35px;
+            border: 1px solid var(--border); box-shadow: var(--shadow);
+            font-family: 'Tajawal', sans-serif;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .sidebar h3 {
+            color: var(--primary); margin-bottom: 25px; font-size: 22px; font-weight: 900;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .sidebar ul { list-style: none; padding: 0; counter-reset: menu-counter; }
+        .sidebar li { margin-bottom: 10px; }
+        .sidebar a {
+            text-decoration: none; color: var(--text-light); font-size: 16px; font-weight: 600;
+            display: flex; align-items: center; padding: 10px 15px; border-radius: 8px; transition: 0.3s;
+        }
+        .sidebar a::before {
+            counter-increment: menu-counter; content: counter(menu-counter);
+            background: var(--border); color: var(--dark); width: 25px; height: 25px;
+            display: flex; align-items: center; justify-content: center; border-radius: 5px; margin-left: 10px; font-size: 13px;
+        }
+        .sidebar a:hover, .sidebar a.active {
+            background: var(--primary); color: white; transform: translateX(-5px);
+        }
+        .sidebar a:hover::before, .sidebar a.active::before { background: white; color: var(--primary); }
+
+        /* منطقة المحتوى */
+        .content-area {
+            flex: 3 1 600px; background: var(--bg-card); border-radius: 16px;
+            padding: 60px 70px; border: 1px solid var(--border); box-shadow: var(--shadow);
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        /* ========== تنسيقات العناوين ========== */
+        h1 {
+            font-family: 'Aref Ruqaa', serif; font-size: 40px; color: var(--primary);
+            margin: 60px 0 25px; padding-bottom: 15px; border-bottom: 2px dashed var(--gold);
+        }
+        h1:first-child { margin-top: 0; }
+        h2 {
+            font-family: 'Aref Ruqaa', serif; font-size: 28px; color: var(--dark);
+            margin: 40px 0 20px; border-right: 5px solid var(--accent); padding-right: 15px;
+            background: rgba(168, 32, 32, 0.05); padding-top: 5px; padding-bottom: 5px;
+        }
+        h3 {
+            font-family: 'Tajawal', sans-serif; font-size: 22px; color: var(--primary);
+            margin: 25px 0 10px; font-weight: 800;
+        }
+        p { margin-bottom: 25px; text-align: justify; }
+        ul { margin-bottom: 25px; padding-right: 30px; }
+        li { margin-bottom: 12px; }
+
+        /* الاستشهادات */
+        .citation-link {
+            color: var(--accent); font-weight: 700; text-decoration: none;
+            font-family: 'Tajawal', sans-serif; font-size: 16px;
+            background: rgba(168, 32, 32, 0.08); padding: 2px 8px; border-radius: 6px;
+            transition: 0.3s; white-space: nowrap;
+        }
+        .citation-link:hover { background: var(--accent); color: white; }
+
+        /* ========== إطارات الصور الثابتة ========== */
+        .figure-container {
+            margin: 45px 0; padding: 15px; background: var(--bg-site); border-radius: 12px;
+            border: 1px solid var(--border); text-align: center; transition: 0.3s;
+        }
+        .figure-container:hover {
+            border-color: var(--gold); box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            transform: translateY(-5px);
+        }
+        .figure-container img {
+            width: 100%; max-height: 500px; object-fit: contain; border-radius: 8px;
+            margin-bottom: 15px; border: 1px solid var(--border); background-color: var(--bg-card);
+        }
+        .figure-caption {
+            font-family: 'Aref Ruqaa', serif; font-size: 22px; color: var(--dark);
+            margin-bottom: 5px;
+        }
+        .figure-source { font-size: 14px; color: var(--text-light); font-family: 'Tajawal', sans-serif; direction: ltr;}
+
+        /* المراجع */
+        .references-list { margin-top: 30px; font-family: 'Tajawal', sans-serif; direction: rtl;}
+        .ref-item {
+            margin-bottom: 20px; padding-right: 40px; text-indent: -40px;
+            font-size: 16px; line-height: 1.8; transition: background 0.2s;
+            border-radius: 8px; padding: 8px 40px 8px 15px;
+        }
+        .ref-item:hover { background: rgba(203, 161, 83, 0.1); }
+        .ref-link {
+            color: var(--primary); text-decoration: none; font-weight: bold;
+            border-bottom: 1px dotted var(--gold); transition: 0.2s;
+        }
+        .ref-link:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+        /* الأزرار العائمة */
+        .floating-actions {
+            position: fixed; bottom: 30px; left: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 1000;
+        }
+        .action-btn {
+            width: 55px; height: 55px; border-radius: 50%; border: none; background: var(--dark); color: white; 
+            font-size: 22px; cursor: pointer; box-shadow: 0 5px 20px rgba(0,0,0,0.3); transition: 0.3s;
+            display: flex; align-items: center; justify-content: center;
+        }
+        body.dark-mode .action-btn { background-color: var(--primary); color: white; }
+        .action-btn:hover { background: var(--gold); transform: scale(1.1) rotate(5deg); color: #000; }
+        #backToTop { opacity: 0; pointer-events: none; transform: translateY(20px); }
+        #backToTop.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+
+        /* الأنيميشن */
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* التجاوب (الهواتف) */
+        @media (max-width: 992px) {
+            .hero-section { min-height: 60vh; padding: 80px 15px; }
+            .hero-title { font-size: 38px; }
+            .main-wrapper { flex-direction: column; padding: 20px 10px; }
+            .sidebar { position: relative; top: 0; max-width: 100%; margin-bottom: 20px; }
+            .content-area { padding: 40px 20px; }
+            h1 { font-size: 32px; }
+            .floating-actions { bottom: 20px; left: 20px; }
+            .action-btn { width: 45px; height: 45px; font-size: 18px; }
+        }
+
+        /* إعدادات الطباعة */
+        @media print {
+            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            body { background: white !important; color: black !important; }
+            .hero-section {
+                height: 100vh !important; display: flex; flex-direction: column; justify-content: center;
+                background: linear-gradient(135deg, #0a3d25 0%, #115d3a 100%) !important;
+                page-break-after: always; padding: 0 50px;
+            }
+            .hero-title { font-size: 60px; color: white; text-shadow: none; }
+            .sidebar, .floating-actions, .progress-container { display: none !important; }
+            .content-area { box-shadow: none; border: none; padding: 0; }
+            h1 { page-break-before: always; }
+            h1:first-child { page-break-before: avoid; }
+            .figure-container, .ref-item { page-break-inside: avoid; }
+            .reveal { opacity: 1 !important; transform: none !important; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="progress-container"><div class="progress-bar" id="progressBar"></div></div>
+
+<div class="floating-actions">
+    <button class="action-btn" id="themeToggle" title="الوضع الليلي"><i class="fas fa-moon" id="themeIcon"></i></button>
+    <button class="action-btn" id="shareBtn" title="مشاركة البحث"><i class="fas fa-share-alt"></i></button>
+    <button class="action-btn" onclick="window.print()" title="حفظ كـ PDF"><i class="fas fa-file-pdf"></i></button>
+    <button class="action-btn" id="backToTop" title="العودة للأعلى"><i class="fas fa-arrow-up"></i></button>
+</div>
+
+<header class="hero-section">
+    <div class="hero-content">
+        <div class="hero-uni"><i class="fas fa-university"></i> جامعة السلطان قابوس | كلية الاقتصاد والعلوم السياسية</div>
+        <h1 class="hero-title">القضية الفلسطينية وتطوراتها في الساحة الدولية</h1>
+        <p class="hero-subtitle">دراسة تحليلية في إطار المواطنة العالمية: يحيى السنوار وعلاقته بمسار القضية</p>
+        
+        <div class="student-badge">
+            <p><i class="fas fa-user-graduate"></i> الباحث: <strong>بدر عبدالله هلال البوسعيدي</strong></p>
+            <p><i class="fas fa-id-badge"></i> الرقم الجامعي: <strong>******</strong></p>
+            <p><i class="fas fa-book-open"></i> المقرر: المواطنة العالمية (EDUC2023) - ربيع 2026</p>
+        </div>
+    </div>
+</header>
+
+<div class="main-wrapper">
+    
+    <aside class="sidebar">
+        <h3><i class="fas fa-bookmark"></i> فهرس المحتويات</h3>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#intro" class="nav-link">تعريف القضية وتبريرها</a></li>
+                <li><a href="#causes" class="nav-link">الأسباب التاريخية</a></li>
+                <li><a href="#impact" class="nav-link">التداعيات الحقوقية</a></li>
+                <li><a href="#global" class="nav-link">التأثير العالمي</a></li>
+                <li><a href="#persona" class="nav-link">يحيى السنوار</a></li>
+                <li><a href="#events" class="nav-link">أحداث ميدانية</a></li>
+                <li><a href="#analysis" class="nav-link">تحليل الأثر</a></li>
+                <li><a href="#solutions" class="nav-link">حلول ومقترحات</a></li>
+                <li><a href="#reflection" class="nav-link">الخلاصة</a></li>
+                <li><a href="#references" class="nav-link">المصادر</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content-area">
+        
+        <section id="intro" class="content-section reveal">
+            <h1>الجزء الأول: اختيار القضية وتبريرها</h1>
+            <h2>تعريف القضية الفلسطينية</h2>
+            <p>تعتبر القضية الفلسطينية واحدة من أبرز وأطول النزاعات في العصر الحديث. تدور القضية بشكل أساسي حول حق الشعب الفلسطيني في تقرير مصيره، وعودة اللاجئين إلى ديارهم، والمطالبة بإنهاء السيطرة العسكرية الإسرائيلية على الأراضي الفلسطينية. ومن خلال قراءتي لهذه القضية، يتضح أنها ليست مجرد نزاع على حدود جغرافية، بل هي قضية حقوق إنسان وقانون دولي بالدرجة الأولى <a href="#ref8" class="citation-link">(Pappé, 2006)</a>.</p>
+            
+            <div class="figure-container">
+                <img src="map.png" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/c/c5/UN_Partition_Plan_For_Palestine_1947.png';" alt="خريطة تاريخية لفلسطين">
+                <div class="figure-caption">الشكل (1): خريطة تاريخية توضح التحولات الجغرافية في فلسطين</div>
+                <div class="figure-source">Source: United Nations Partition Plan Archives</div>
+            </div>
+
+            <h2>سبب اختيار القضية</h2>
+            <p>اخترت هذه القضية تحديداً لأنها تمثل تحدياً حقيقياً لمفهوم "المواطنة العالمية" الذي ندرسه. فعندما نرى استمرار هذه الأزمة لعقود، ندرك وجود تباين في تطبيق مبادئ العدالة الدولية وحقوق الإنسان. هذا التباين يجعل من دراسة القضية الفلسطينية أمراً مهماً لفهم كيف يتعامل المجتمع الدولي مع الأزمات الإنسانية والسياسية المعقدة.</p>
+        </section>
+
+        <section id="causes" class="content-section reveal">
+            <h1>الأسباب التاريخية والسياسية لنشوء القضية</h1>
+            <p>يمكن تلخيص الأسباب التي أدت إلى ظهور هذه القضية واستمرارها في عدة نقاط رئيسية:</p>
+            <ul>
+                <li><strong>فترة الانتداب ووعد بلفور:</strong> يرى المؤرخون أن التدخلات البريطانية في بداية القرن العشرين، وخاصة وعد بلفور (1917)، ساهمت في تغيير الواقع الديموغرافي والسياسي في فلسطين بشكل يتجاهل حقوق سكانها الأصليين <a href="#ref5" class="citation-link">(Khalidi, 2020)</a>.</li>
+                <li><strong>أحداث 1948 (النكبة):</strong> نتج عن إعلان قيام دولة إسرائيل وحرب 1948 تهجير مئات الآلاف من الفلسطينيين، مما خلق أزمة لاجئين مستمرة حتى يومنا هذا، وتعد من أكبر القضايا التي تتابعها الأمم المتحدة <a href="#ref10" class="citation-link">(UNRWA, 2023)</a>.</li>
+                <li><strong>التوسع في بناء المستوطنات:</strong> الاستمرار في بناء المستوطنات في الأراضي المحتلة عام 1967 يعتبر، بحسب العديد من القرارات الأممية، عقبة رئيسية أمام أي حل سياسي.</li>
+                <li><strong>الحصار الاقتصادي:</strong> القيود المفروضة على حركة الأفراد والبضائع في قطاع غزة منذ عام 2007 أدت إلى أزمة اقتصادية وإنسانية خانقة أثرت على حياة ملايين المدنيين <a href="#ref11" class="citation-link">(World Bank, 2023)</a>.</li>
+            </ul>
+
+            <div class="figure-container">
+                <img src="refugees.jpg" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/c/cd/Palestinian_refugees_1948.jpg';" alt="أوضاع اللاجئين">
+                <div class="figure-caption">الشكل (2): أوضاع اللاجئين الفلسطينيين إبان النكبة</div>
+                <div class="figure-source">Source: UNRWA Archives / Public Domain</div>
+            </div>
+        </section>
+
+        <section id="impact" class="content-section reveal">
+            <h1>تداعيات القضية على حقوق الإنسان والمواطنة</h1>
+            <h2>1. الجانب الحقوقي:</h2>
+            <p>أشارت تقارير حديثة لمنظمات حقوقية معروفة، مثل هيومن رايتس ووتش ومنظمة العفو الدولية، إلى أن السياسات المتبعة ضد الفلسطينيين تتضمن ممارسات تمييزية واسعة النطاق. وقد وصفت بعض هذه التقارير تلك السياسات بأنها ترقى قانونياً إلى مستوى "الفصل العنصري"، وهو ما يطرح تساؤلات مهمة حول دور المجتمع الدولي في حماية حقوق الإنسان <a href="#ref1" class="citation-link">(Amnesty International, 2022)</a>.</p>
+            
+            <h2>2. الجانب الاجتماعي والاقتصادي:</h2>
+            <p>من الواضح أن القيود الأمنية والاقتصادية تعيق بشكل كبير تحقيق التنمية المستدامة في الأراضي الفلسطينية. وقد بينت تقارير البنك الدولي كيف أدت هذه الظروف إلى ارتفاع نسب البطالة والفقر، مما يصعب على الأفراد الحصول على أبسط حقوقهم في العيش الكريم وتطوير مجتمعهم.</p>
+
+            <div class="figure-container">
+                <img src="economy.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop';" alt="مؤشرات اقتصادية">
+                <div class="figure-caption">الشكل (3): مؤشرات اقتصادية للوضع في الأراضي الفلسطينية</div>
+                <div class="figure-source">Source: World Bank Data Illustration</div>
+            </div>
+        </section>
+
+        <section id="global" class="content-section reveal">
+            <h1>التأثير العالمي للقضية</h1>
+            <p>لم تعد القضية محصورة في الجانب الإقليمي، بل امتد تأثيرها ليشمل:</p>
+            <ul>
+                <li><strong>الجانب القانوني الدولي:</strong> أصبحت المؤسسات مثل محكمة العدل الدولية (ICJ) مسرحاً لمناقشة تداعيات الصراع، كما حدث في الدعوى التي رفعتها جنوب إفريقيا لطلب تدابير مؤقتة. هذا يضع المنظومة القانونية الدولية أمام اختبار حقيقي لمدى التزامها بتطبيق القانون على الجميع <a href="#ref3" class="citation-link">(ICJ, 2024)</a>.</li>
+                <li><strong>التفاعل المجتمعي العالمي:</strong> لاحظنا في السنوات الأخيرة زيادة ملحوظة في وعي المجتمعات العالمية بالقضية، وبرز ذلك من خلال الاحتجاجات في الجامعات الغربية وحركات المقاطعة السلمية.</li>
+            </ul>
+
+            <div class="figure-container">
+                <img src="un.jpg" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/b/b3/United_Nations_Security_Council_Chamber_-_New_York_City.jpg';" alt="جلسة أممية">
+                <div class="figure-caption">الشكل (4): جلسة لمجلس الأمن الدولي</div>
+                <div class="figure-source">Source: United Nations Photo</div>
+            </div>
+        </section>
+
+        <section id="persona" class="content-section reveal">
+            <h1>الجزء الثاني: يحيى السنوار وعلاقته بمسار القضية</h1>
+            <h2>نبذة عن الشخصية</h2>
+            <p>يحيى السنوار (1962 - 2024) كان شخصية سياسية وعسكرية بارزة في الساحة الفلسطينية، وشغل منصب رئيس المكتب السياسي لحركة حماس. ولد السنوار في مخيم خان يونس للاجئين، وقضى أكثر من 22 عاماً في السجون الإسرائيلية قبل أن يخرج في صفقة تبادل عام 2011. دراسته الطويلة للمجتمع والسياسة الإسرائيلية خلال فترة سجنه أثرت بشكل كبير على طريقة تفكيره وإدارته للصراع لاحقاً <a href="#ref6" class="citation-link">(Levitt, 2006)</a>.</p>
+            
+            <div class="figure-container">
+                <img src="sinwar.jpg" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/c/c3/Yahya_Sinwar_2011.jpg';" alt="صورة السنوار">
+                <div class="figure-caption">الشكل (5): صورة أرشيفية ليحيى السنوار</div>
+                <div class="figure-source">Source: Wikimedia Commons</div>
+            </div>
+
+            <h2>طبيعة اهتمامه بالقضية</h2>
+            <p>لم يكن السنوار مجرد مراقب سياسي، بل كان نتاجاً مباشراً لبيئة اللجوء والاحتلال. يرى بعض المحللين أن نهجه اعتمد على فكرة أساسية وهي أن التفاوض السلمي وحده لم يعد قادراً على تحقيق نتائج ملموسة بعد سنوات طويلة من التعثر، وأن لفت انتباه العالم إلى معاناة الفلسطينيين يتطلب استخدام أوراق ضغط ميدانية قوية ومحاولة تغيير الواقع الميداني <a href="#ref9" class="citation-link">(Roy, 2011)</a>.</p>
+        </section>
+
+        <section id="events" class="content-section reveal">
+            <h1>مواقف وأحداث ميدانية مرتبطة بالشخصية</h1>
+            <h3>1. دعم الاحتجاجات الشعبية (مسيرات العودة 2018):</h3>
+            <p>في عام 2018، دعمت القيادة في غزة مسيرات شعبية واسعة نحو الحدود للمطالبة بفك الحصار. ورغم التكلفة البشرية العالية، يمكن تفسير هذا التحرك بأنه كان محاولة لإعادة القضية إلى الواجهة الإعلامية والدبلوماسية وتسليط الضوء على الأزمة الإنسانية الخانقة <a href="#ref7" class="citation-link">(Norman, 2010)</a>.</p>
+            
+            <div class="figure-container">
+                <img src="march.jpg" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/7/7b/Great_March_of_Return.jpg';" alt="مسيرات العودة">
+                <div class="figure-caption">الشكل (6): مشهد ميداني من الاحتجاجات في قطاع غزة</div>
+                <div class="figure-source">Source: Press Archives</div>
+            </div>
+
+            <h3>2. ربط الجبهات الجغرافية (2021):</h3>
+            <p>من أبرز التحولات التي قادها السنوار كانت محاولة دمج الساحات الفلسطينية المختلفة. ففي عام 2021، ردت الفصائل في غزة عسكرياً على التوترات التي حدثت في مدينة القدس (حي الشيخ جراح).</p>
+            
+            <h3>3. التطورات الأمنية في 7 أكتوبر (2023):</h3>
+            <p>أدت التكتيكات والهجوم المفاجئ الذي حدث في السابع من أكتوبر إلى إحداث صدمة كبيرة. ومن منظور التحليل السياسي، أدت هذه التطورات إلى تعطيل بعض مسارات التطبيع الإقليمي التي كانت تتجاوز الملف الفلسطيني <a href="#ref4" class="citation-link">(International Crisis Group, 2023)</a>.</p>
+        </section>
+
+        <section id="analysis" class="content-section reveal">
+            <h1>تحليل أثر الشخصية في تطورات القضية</h1>
+            <ul>
+                <li><strong>إعادة الاهتمام الدولي:</strong> من خلال التصعيد العسكري والسياسي، أسهمت سياساته في دفع الدول الفاعلة إلى إعادة إدراج الملف الفلسطيني كأولوية على طاولات النقاش الدبلوماسي.</li>
+                <li><strong>تطوير القدرات التنظيمية:</strong> على الرغم من الحصار المشدد، عملت الحركة تحت قيادته على تطوير قدرات ذاتية مكنتها من الصمود والمواجهة لفترات طويلة.</li>
+                <li><strong>التأثير على التصورات السياسية:</strong> يتضح من خلال متابعة الأحداث أن نهجه وجه رسالة واضحة مفادها أن الاستمرار في سياسة احتواء النزاع بدلاً من حله سيؤدي دائماً إلى انفجارات متكررة.</li>
+            </ul>
+        </section>
+
+        <section id="solutions" class="content-section reveal">
+            <h1>الجزء الثالث: حلول ومقترحات قابلة للتنفيذ</h1>
+            <h2>1. على مستوى المنظمات والدول:</h2>
+            <ul>
+                <li>ضرورة التزام الدول بقرارات الشرعية الدولية واحترام توصيات محكمة العدل الدولية.</li>
+                <li>تقديم دعم مؤسسي ومستدام لوكالات الإغاثة الدولية (مثل الأونروا) لتخفيف حدة الأزمة الإنسانية.</li>
+            </ul>
+
+            <h2>2. على مستوى المؤسسات المدنية:</h2>
+            <ul>
+                <li>تشجيع الجامعات والمؤسسات على مراجعة استثماراتها والتأكد من عدم ارتباطها بشركات تتربح من استمرار الاحتلال.</li>
+            </ul>
+
+            <h2>3. دور الفرد والمواطن العالمي:</h2>
+            <ul>
+                <li>العمل على التثقيف الذاتي ومتابعة المصادر المتعددة لفهم تعقيدات الصراع، والمشاركة في الحوارات التي تعزز قيم العدالة.</li>
+            </ul>
+        </section>
+
+        <section id="reflection" class="content-section reveal">
+            <h1>الخلاصة والربط بين القضية والشخصية</h1>
+            <p>من خلال إعدادي لهذا التقرير، تعلمت أن الأزمات العالمية الممتدة لا يمكن فهمها بمعزل عن الظروف الإنسانية التي خلقتها. الربط بين القضية الفلسطينية وشخصية يحيى السنوار يقدم مثالاً واضحاً على كيف أن استمرار الحصار وغياب الأفق السياسي يؤديان بشكل طبيعي إلى بروز شخصيات وتيارات تتبنى مسارات حادة في المواجهة.</p>
+            <p>وبرأيي، فإن الدرس الأهم الذي يمكن استخلاصه هو أن المواطنة العالمية تتطلب منا معالجة الجذور الأساسية للنزاعات (كالاحتلال وانعدام العدالة) بدلاً من محاولة التعامل فقط مع أعراضها. إن تحقيق السلام الدائم لا يمكن أن يُفرض بالقوة، بل من خلال إنفاذ القانون الدولي بمساواة تامة.</p>
+        </section>
+
+        <section id="references" class="content-section reveal">
+            <h1>قائمة المصادر والمراجع</h1>
+            <p style="font-family:'Tajawal', sans-serif; color:var(--text-light); margin-bottom:20px;">
+                <i class="fas fa-external-link-alt"></i> جميع المراجع أدناه تفاعلية، اضغط على الرابط للوصول للمصدر الأصلي.
+            </p>
+            
+            <div class="references-list">
+                <div class="ref-item" id="ref1">
+                    <strong>1. Amnesty International. (2022).</strong> <a href="https://www.amnesty.org/en/documents/mde15/5141/2022/en/" target="_blank" class="ref-link"><em>Israel’s Apartheid Against Palestinians: Cruel System of Domination and Crime Against Humanity.</em></a>
+                </div>
+                <div class="ref-item" id="ref2">
+                    <strong>2. Human Rights Watch. (2021).</strong> <a href="https://www.hrw.org/report/2021/04/27/threshold-crossed/israeli-authorities-and-crimes-apartheid-and-persecution" target="_blank" class="ref-link"><em>A Threshold Crossed: Israeli Authorities and the Crimes of Apartheid and Persecution.</em></a>
+                </div>
+                <div class="ref-item" id="ref3">
+                    <strong>3. International Court of Justice (ICJ). (2024).</strong> <a href="https://www.icj-cij.org/index.php/case/192" target="_blank" class="ref-link"><em>Application of the Convention on the Prevention and Punishment of the Crime of Genocide.</em></a> The Hague.
+                </div>
+                <div class="ref-item" id="ref4">
+                    <strong>4. International Crisis Group. (2023).</strong> <a href="https://www.crisisgroup.org/middle-east-north-africa/eastern-mediterranean/gaza-israelpalestine" target="_blank" class="ref-link"><em>The Gaza War and its Regional Repercussions.</em></a> Middle East Report.
+                </div>
+                <div class="ref-item" id="ref5">
+                    <strong>5. Khalidi, R. (2020).</strong> <a href="https://books.google.com/books/about/The_Hundred_Years_War_on_Palestine.html?id=9A4PEAAAQBAJ" target="_blank" class="ref-link"><em>The Hundred Years' War on Palestine: A History of Settler Colonialism.</em></a> Metropolitan Books.
+                </div>
+                <div class="ref-item" id="ref6">
+                    <strong>6. Levitt, M. (2006).</strong> <a href="https://yalebooks.yale.edu/book/9780300122589/hamas" target="_blank" class="ref-link"><em>Hamas: Politics, Charity, and Terrorism in the Service of Jihad.</em></a> Yale University Press.
+                </div>
+                <div class="ref-item" id="ref7">
+                    <strong>7. Norman, J. M. (2010).</strong> <a href="https://www.routledge.com/The-Second-Palestinian-Intifada-Civil-Resistance/Norman/p/book/9780415782812" target="_blank" class="ref-link"><em>The Second Palestinian Intifada: Civil Resistance.</em></a> Routledge.
+                </div>
+                <div class="ref-item" id="ref8">
+                    <strong>8. Pappé, I. (2006).</strong> <a href="https://oneworld-publications.com/ethnic-cleansing-palestine" target="_blank" class="ref-link"><em>The Ethnic Cleansing of Palestine.</em></a> Oneworld Publications.
+                </div>
+                <div class="ref-item" id="ref9">
+                    <strong>9. Roy, S. (2011).</strong> <a href="https://press.princeton.edu/books/paperback/9780691154503/hamas-and-civil-society-in-gaza" target="_blank" class="ref-link"><em>Hamas and Civil Society in Gaza.</em></a> Princeton University Press.
+                </div>
+                <div class="ref-item" id="ref10">
+                    <strong>10. UNRWA. (2023).</strong> <a href="https://www.unrwa.org/resources/reports/unrwa-annual-report-2023" target="_blank" class="ref-link"><em>Palestine Refugees: UNRWA's Role and Operations in the Near East.</em></a> Amman.
+                </div>
+                <div class="ref-item" id="ref11">
+                    <strong>11. World Bank. (2023).</strong> <a href="https://www.worldbank.org/en/country/westbankandgaza/publication/economic-update" target="_blank" class="ref-link"><em>Racing Against Time: Palestinian Economic Update.</em></a> Washington, D.C.
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<footer style="text-align:center; padding:30px; font-family:'Tajawal', sans-serif; color:var(--text-light); border-top:1px solid var(--border); background:var(--bg-site);">
+    <p>📚 بحث أكاديمي ضمن متطلبات مقرر المواطنة العالمية (EDUC2023) - جامعة السلطان قابوس</p>
+    <p>جميع الحقوق محفوظة © 2026 بدر عبدالله هلال البوسعيدي</p>
+</footer>
+
+<script>
+    // 1. شريط التقدم وزر العودة للأعلى
+    window.onscroll = function() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("progressBar").style.width = scrolled + "%";
+
+        var backBtn = document.getElementById("backToTop");
+        if (winScroll > 300) backBtn.classList.add("show");
+        else backBtn.classList.remove("show");
+    };
+
+    // 2. تفعيل العودة للأعلى
+    document.getElementById("backToTop").addEventListener("click", function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // 3. الوضع الليلي مع الحفظ
+    function toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+        var icon = document.getElementById('themeIcon');
+        if (document.body.classList.contains('dark-mode')) {
+            icon.classList.replace('fa-moon', 'fa-sun');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            icon.classList.replace('fa-sun', 'fa-moon');
+            localStorage.setItem('theme', 'light');
+        }
+    }
+
+    (function loadTheme() {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'dark') {
+            document.body.classList.add('dark-mode');
+            document.getElementById('themeIcon').classList.replace('fa-moon', 'fa-sun');
+        }
+    })();
+
+    document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+
+    // 4. تفعيل المشاركة
+    document.getElementById('shareBtn').addEventListener('click', function() {
+        if (navigator.share) {
+            navigator.share({
+                title: 'البحث الأكاديمي: القضية الفلسطينية',
+                text: 'دراسة تحليلية في إطار المواطنة العالمية.',
+                url: window.location.href,
+            }).catch(console.error);
+        } else {
+            navigator.clipboard.writeText(window.location.href);
+            alert('تم نسخ الرابط! يمكنك الآن مشاركته.');
+        }
+    });
+
+    // 5. تأثيرات الظهور (Reveal)
+    function revealElements() {
+        var reveals = document.querySelectorAll('.reveal');
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 100;
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add('active');
+            }
+        }
+    }
+    window.addEventListener('scroll', revealElements);
+    revealElements();
+
+    // 6. الفهرس الذكي النشط
+    const sections = document.querySelectorAll('.content-section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 200;
+            if (window.scrollY >= sectionTop) {
+                current = section.getAttribute('id');
+            }
+        });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(current)) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
