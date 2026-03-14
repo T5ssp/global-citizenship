@@ -671,6 +671,13 @@
             position: relative;
             z-index: 1;
         }
+        .sidebar-stack {
+            display: grid;
+            gap: 18px;
+        }
+        .sidebar-stack > * {
+            margin: 0;
+        }
         .sidebar-panel {
             margin-bottom: 18px;
             padding: 22px;
@@ -768,6 +775,12 @@
             cursor: pointer;
             align-items: center;
             justify-content: space-between;
+        }
+        .toc-toggle i {
+            transition: transform 0.25s ease;
+        }
+        .toc-toggle.is-open i {
+            transform: rotate(180deg);
         }
         .sidebar-tools {
             margin-bottom: 18px;
@@ -941,12 +954,14 @@
             background: rgba(251, 191, 36, 0.08);
             border-color: rgba(251, 191, 36, 0.24);
         }
-        .sidebar.toc-collapsed #navbar,
-        .sidebar.toc-collapsed .sidebar-quote {
-            display: none;
-        }
 
         /* منطقة المحتوى الرئيسية */
+        .sidebar-stack > .sidebar-tools,
+        .sidebar-stack > .sidebar-stats,
+        .sidebar-stack > #navbar,
+        .sidebar-stack > .sidebar-quote {
+            margin: 0;
+        }
         .content-area {
             position: relative;
             overflow: hidden;
@@ -1383,6 +1398,7 @@
         }
         .content-section {
             position: relative;
+            scroll-margin-top: 110px;
             padding: 26px 28px;
             border-radius: 26px;
             border: 1px solid rgba(203, 161, 83, 0.12);
@@ -2374,17 +2390,55 @@
             .reference-architecture { grid-template-columns: repeat(2, minmax(0, 1fr)); }
             .main-wrapper { flex-direction: column; padding: 20px 10px; }
             .sidebar {
-                position: relative;
-                top: 0;
+                position: sticky;
+                top: 12px;
+                z-index: 40;
                 max-width: 100%;
-                max-height: none;
-                overflow: visible;
+                max-height: calc(100vh - 24px);
+                overflow: hidden;
                 margin-bottom: 20px;
-                padding: 20px;
+                padding: 14px;
                 border-radius: 24px;
             }
-            .sidebar-panel { padding: 20px; }
+            .sidebar::before { height: 132px; }
+            .sidebar-panel {
+                margin-bottom: 0;
+                padding: 18px;
+                border-radius: 20px;
+            }
+            .sidebar-stack {
+                margin-top: 14px;
+                max-height: calc(100vh - 230px);
+                overflow: auto;
+                padding-inline-end: 4px;
+            }
+            .sidebar-stack::-webkit-scrollbar,
+            #navbar::-webkit-scrollbar,
+            .keyword-chip-list::-webkit-scrollbar,
+            .toc-filter-bar::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+            .sidebar.toc-collapsed {
+                max-height: none;
+                overflow: visible;
+            }
+            .sidebar.toc-collapsed .sidebar-summary {
+                display: none;
+            }
+            .sidebar.toc-collapsed .sidebar-stack {
+                display: none;
+            }
+            .sidebar.toc-collapsed .reading-progress-card {
+                margin-top: 14px;
+                padding: 14px 16px;
+            }
             .toc-toggle { display: flex; }
+            #navbar {
+                max-height: min(42vh, 360px);
+                overflow: auto;
+                padding-inline-end: 4px;
+            }
             .content-area { padding: 20px; border-radius: 24px; }
             .article-bridge-grid { grid-template-columns: 1fr; }
             .content-section { padding: 22px 20px; border-radius: 22px; }
@@ -2421,8 +2475,69 @@
             .insight-card,
             .analysis-suite-head,
             .analysis-card { padding: 18px; }
+            .sidebar {
+                top: 10px;
+                padding: 12px;
+                border-radius: 20px;
+            }
+            .sidebar-panel {
+                padding: 16px;
+            }
+            .sidebar h3 {
+                font-size: 24px;
+            }
             .reading-progress-head { display: block; }
-            .sidebar a { min-height: auto; }
+            .sidebar-stack {
+                margin-top: 12px;
+                max-height: calc(100vh - 210px);
+            }
+            .sidebar-tools {
+                padding: 16px;
+                border-radius: 18px;
+            }
+            .search-shell {
+                padding: 10px 12px;
+            }
+            .keyword-chip-list,
+            .toc-filter-bar {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                padding-bottom: 4px;
+                scrollbar-width: none;
+            }
+            .sidebar a {
+                min-height: auto;
+                padding: 12px 14px;
+                border-radius: 18px;
+            }
+            .sidebar a:hover,
+            .sidebar a.active {
+                transform: translateY(-2px);
+            }
+            .nav-link-text {
+                font-size: 14px;
+            }
+            .nav-link small {
+                font-size: 11px;
+            }
+            .article-bridge h2,
+            .analysis-suite-head h2 {
+                font-size: 28px;
+                line-height: 1.5;
+            }
+            .content-section h1 {
+                font-size: 28px;
+                line-height: 1.5;
+            }
+            .content-section p,
+            .content-section li,
+            .article-bridge p {
+                font-size: 15px;
+                line-height: 2;
+            }
+            .content-section {
+                scroll-margin-top: 122px;
+            }
             .content-area { padding: 16px; }
             .status-actions,
             .notes-actions,
@@ -3267,69 +3382,71 @@
                 </div>
                 <p class="reading-caption" id="readingProgressText">0% من محاور البحث</p>
             </div>
-            <button class="toc-toggle" id="tocToggle" type="button" aria-expanded="true">
+            <button class="toc-toggle" id="tocToggle" type="button" aria-expanded="true" aria-controls="tocPanel">
                 <span id="tocToggleText">إخفاء المحاور</span>
                 <i class="fas fa-layer-group" aria-hidden="true"></i>
             </button>
         </div>
 
-        <div class="sidebar-tools">
-            <label class="sidebar-label" for="articleSearch">ابحث داخل البحث</label>
-            <div class="search-shell">
-                <i class="fas fa-search" aria-hidden="true"></i>
-                <input type="search" id="articleSearch" class="search-input" placeholder="مثل: غزة، اللاجئين، القانون الدولي">
+        <div class="sidebar-stack" id="tocPanel">
+            <div class="sidebar-tools">
+                <label class="sidebar-label" for="articleSearch">ابحث داخل البحث</label>
+                <div class="search-shell">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input type="search" id="articleSearch" class="search-input" placeholder="مثل: غزة، اللاجئين، القانون الدولي">
+                </div>
+                <p class="search-meta" id="searchResultsMeta" aria-live="polite">اكتب كلمة مفتاحية لاستعراض المحاور والمراجع المطابقة.</p>
+                <div class="keyword-chip-list" id="keywordChipList" aria-label="كلمات مفتاحية سريعة">
+                    <button class="keyword-chip" type="button" data-keyword="غزة">غزة</button>
+                    <button class="keyword-chip" type="button" data-keyword="اللاجئين">اللاجئين</button>
+                    <button class="keyword-chip" type="button" data-keyword="القانون الدولي">القانون الدولي</button>
+                    <button class="keyword-chip" type="button" data-keyword="النكبة">النكبة</button>
+                    <button class="keyword-chip" type="button" data-keyword="الحصار">الحصار</button>
+                    <button class="keyword-chip" type="button" data-keyword="السنوار">السنوار</button>
+                </div>
+                <div class="toc-filter-bar" aria-label="تصفية الفهرس">
+                    <button class="toc-filter-chip is-active" type="button" data-filter="all">الكل</button>
+                    <button class="toc-filter-chip" type="button" data-filter="history">التاريخ</button>
+                    <button class="toc-filter-chip" type="button" data-filter="humanitarian">الحقوق</button>
+                    <button class="toc-filter-chip" type="button" data-filter="international">الدولي</button>
+                    <button class="toc-filter-chip" type="button" data-filter="political">السياسي</button>
+                    <button class="toc-filter-chip" type="button" data-filter="solutions">الحلول</button>
+                </div>
+                <p class="toc-filter-status" id="tocFilterStatus">يعرض الفهرس الآن جميع المحاور.</p>
             </div>
-            <p class="search-meta" id="searchResultsMeta" aria-live="polite">اكتب كلمة مفتاحية لاستعراض المحاور والمراجع المطابقة.</p>
-            <div class="keyword-chip-list" id="keywordChipList" aria-label="كلمات مفتاحية سريعة">
-                <button class="keyword-chip" type="button" data-keyword="غزة">غزة</button>
-                <button class="keyword-chip" type="button" data-keyword="اللاجئين">اللاجئين</button>
-                <button class="keyword-chip" type="button" data-keyword="القانون الدولي">القانون الدولي</button>
-                <button class="keyword-chip" type="button" data-keyword="النكبة">النكبة</button>
-                <button class="keyword-chip" type="button" data-keyword="الحصار">الحصار</button>
-                <button class="keyword-chip" type="button" data-keyword="السنوار">السنوار</button>
+
+            <div class="sidebar-stats" aria-label="ملخص سريع">
+                <div>
+                    <span>المراجع</span>
+                    <strong id="sidebarRefCount">0</strong>
+                </div>
+                <div>
+                    <span>الصور</span>
+                    <strong id="sidebarFigureCount">0</strong>
+                </div>
+                <div>
+                    <span>زمن القراءة</span>
+                    <strong id="sidebarReadingTime">0 د</strong>
+                </div>
             </div>
-            <div class="toc-filter-bar" aria-label="تصفية الفهرس">
-                <button class="toc-filter-chip is-active" type="button" data-filter="all">الكل</button>
-                <button class="toc-filter-chip" type="button" data-filter="history">التاريخ</button>
-                <button class="toc-filter-chip" type="button" data-filter="humanitarian">الحقوق</button>
-                <button class="toc-filter-chip" type="button" data-filter="international">الدولي</button>
-                <button class="toc-filter-chip" type="button" data-filter="political">السياسي</button>
-                <button class="toc-filter-chip" type="button" data-filter="solutions">الحلول</button>
-            </div>
-            <p class="toc-filter-status" id="tocFilterStatus">يعرض الفهرس الآن جميع المحاور.</p>
+
+            <nav id="navbar" aria-label="التنقل بين المحاور">
+                <ul>
+                    <li><a href="#intro" class="nav-link" data-cluster="history"><span class="nav-link-copy"><span class="nav-link-text">تعريف القضية وتبريرها</span><small>المدخل والمنطلق العام</small></span></a></li>
+                    <li><a href="#causes" class="nav-link" data-cluster="history"><span class="nav-link-copy"><span class="nav-link-text">الأسباب التاريخية</span><small>الجذور السياسية والوقائع المؤسسة</small></span></a></li>
+                    <li><a href="#impact" class="nav-link" data-cluster="humanitarian"><span class="nav-link-copy"><span class="nav-link-text">التداعيات الحقوقية</span><small>الحقوق والبعد الإنساني والاجتماعي</small></span></a></li>
+                    <li><a href="#global" class="nav-link" data-cluster="international"><span class="nav-link-copy"><span class="nav-link-text">التأثير العالمي</span><small>القانون الدولي والمجال العالمي</small></span></a></li>
+                    <li><a href="#persona" class="nav-link" data-cluster="political"><span class="nav-link-copy"><span class="nav-link-text">يحيى السنوار</span><small>الشخصية في سياقها السياسي</small></span></a></li>
+                    <li><a href="#events" class="nav-link" data-cluster="political"><span class="nav-link-copy"><span class="nav-link-text">أحداث ميدانية</span><small>محطات وتحولات مفصلية</small></span></a></li>
+                    <li><a href="#analysis" class="nav-link" data-cluster="political"><span class="nav-link-copy"><span class="nav-link-text">تحليل الأثر</span><small>قراءة في المفاعيل السياسية</small></span></a></li>
+                    <li><a href="#solutions" class="nav-link" data-cluster="solutions"><span class="nav-link-copy"><span class="nav-link-text">حلول ومقترحات</span><small>مداخل عملية قابلة للتنفيذ</small></span></a></li>
+                    <li><a href="#reflection" class="nav-link" data-cluster="solutions"><span class="nav-link-copy"><span class="nav-link-text">الخلاصة</span><small>الربط النهائي بين القضية والشخصية</small></span></a></li>
+                    <li><a href="#references" class="nav-link" data-cluster="international"><span class="nav-link-copy"><span class="nav-link-text">المصادر</span><small>المراجع والروابط الأساسية</small></span></a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-quote">يمكنك الانتقال السريع بين المحاور من هنا، أو متابعة التسلسل الأكاديمي كاملًا من الجذور التاريخية حتى الخاتمة والمراجع.</div>
         </div>
-
-        <div class="sidebar-stats" aria-label="ملخص سريع">
-            <div>
-                <span>المراجع</span>
-                <strong id="sidebarRefCount">0</strong>
-            </div>
-            <div>
-                <span>الصور</span>
-                <strong id="sidebarFigureCount">0</strong>
-            </div>
-            <div>
-                <span>زمن القراءة</span>
-                <strong id="sidebarReadingTime">0 د</strong>
-            </div>
-        </div>
-
-        <nav id="navbar" aria-label="التنقل بين المحاور">
-            <ul>
-                <li><a href="#intro" class="nav-link" data-cluster="history"><span class="nav-link-copy"><span class="nav-link-text">تعريف القضية وتبريرها</span><small>المدخل والمنطلق العام</small></span></a></li>
-                <li><a href="#causes" class="nav-link" data-cluster="history"><span class="nav-link-copy"><span class="nav-link-text">الأسباب التاريخية</span><small>الجذور السياسية والوقائع المؤسسة</small></span></a></li>
-                <li><a href="#impact" class="nav-link" data-cluster="humanitarian"><span class="nav-link-copy"><span class="nav-link-text">التداعيات الحقوقية</span><small>الحقوق والبعد الإنساني والاجتماعي</small></span></a></li>
-                <li><a href="#global" class="nav-link" data-cluster="international"><span class="nav-link-copy"><span class="nav-link-text">التأثير العالمي</span><small>القانون الدولي والمجال العالمي</small></span></a></li>
-                <li><a href="#persona" class="nav-link" data-cluster="political"><span class="nav-link-copy"><span class="nav-link-text">يحيى السنوار</span><small>الشخصية في سياقها السياسي</small></span></a></li>
-                <li><a href="#events" class="nav-link" data-cluster="political"><span class="nav-link-copy"><span class="nav-link-text">أحداث ميدانية</span><small>محطات وتحولات مفصلية</small></span></a></li>
-                <li><a href="#analysis" class="nav-link" data-cluster="political"><span class="nav-link-copy"><span class="nav-link-text">تحليل الأثر</span><small>قراءة في المفاعيل السياسية</small></span></a></li>
-                <li><a href="#solutions" class="nav-link" data-cluster="solutions"><span class="nav-link-copy"><span class="nav-link-text">حلول ومقترحات</span><small>مداخل عملية قابلة للتنفيذ</small></span></a></li>
-                <li><a href="#reflection" class="nav-link" data-cluster="solutions"><span class="nav-link-copy"><span class="nav-link-text">الخلاصة</span><small>الربط النهائي بين القضية والشخصية</small></span></a></li>
-                <li><a href="#references" class="nav-link" data-cluster="international"><span class="nav-link-copy"><span class="nav-link-text">المصادر</span><small>المراجع والروابط الأساسية</small></span></a></li>
-            </ul>
-        </nav>
-
-        <div class="sidebar-quote">يمكنك الانتقال السريع بين المحاور من هنا، أو متابعة التسلسل الأكاديمي كاملًا من الجذور التاريخية حتى الخاتمة والمراجع.</div>
     </aside>
 
     <!-- منطقة المحتوى -->
@@ -3871,7 +3988,7 @@
     <p>جميع الحقوق محفوظة © 2026 بدر عبدالله هلال البوسعيدي</p>
 </footer>
 
-<script>
+<script type="application/json" data-legacy-disabled="true">
     // 1. شريط التقدم
     window.onscroll = function() {
         var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -4012,6 +4129,7 @@
 
         var body = document.body;
         var sidebar = document.querySelector('.sidebar');
+        var sidebarStack = document.getElementById('tocPanel');
         var themeColorMeta = document.querySelector('meta[name="theme-color"]');
         var backToTopButton = resetEventNode('backToTop');
         var themeToggleButton = resetEventNode('themeToggle');
@@ -4124,10 +4242,12 @@
         var defaultGlossaryMessage = glossaryMeta ? glossaryMeta.textContent : '';
         var descriptionMeta = document.querySelector('meta[name="description"]');
         var shareText = descriptionMeta ? descriptionMeta.getAttribute('content') : '\u062f\u0631\u0627\u0633\u0629 \u062a\u062d\u0644\u064a\u0644\u064a\u0629 \u0641\u064a \u0625\u0637\u0627\u0631 \u0627\u0644\u0645\u0648\u0627\u0637\u0646\u0629 \u0627\u0644\u0639\u0627\u0644\u0645\u064a\u0629.';
-        var expandedTocLabel = '\u0625\u062e\u0641\u0627\u0621 \u0627\u0644\u0645\u062d\u0627\u0648\u0631';
-        var collapsedTocLabel = '\u0625\u0638\u0647\u0627\u0631 \u0627\u0644\u0645\u062d\u0627\u0648\u0631';
+        var expandedTocLabel = '\u0625\u062e\u0641\u0627\u0621 \u0627\u0644\u0641\u0647\u0631\u0633';
+        var collapsedTocLabel = '\u0641\u062a\u062d \u0627\u0644\u0641\u0647\u0631\u0633';
         var wasDesktopViewport = window.innerWidth > 992;
         var tocInitialized = false;
+        var articleSearchTimer = null;
+        var scrollTicking = false;
         var activeTocFilter = 'all';
         var activeReferenceFilter = 'all';
         var activeRouteKey = 'all';
@@ -5649,6 +5769,11 @@
             var shouldCollapse = window.innerWidth <= 992 && !isExpanded;
             sidebar.classList.toggle('toc-collapsed', shouldCollapse);
             tocToggleButton.setAttribute('aria-expanded', shouldCollapse ? 'false' : 'true');
+            tocToggleButton.classList.toggle('is-open', !shouldCollapse);
+
+            if (sidebarStack) {
+                sidebarStack.setAttribute('aria-hidden', shouldCollapse ? 'true' : 'false');
+            }
 
             if (tocToggleText) {
                 tocToggleText.textContent = shouldCollapse ? collapsedTocLabel : expandedTocLabel;
@@ -5748,6 +5873,17 @@
             if (searchResultsMeta) {
                 searchResultsMeta.textContent = defaultSearchMessage;
             }
+        }
+
+        function scheduleArticleSearch(shouldScrollToFirstMatch) {
+            if (articleSearchTimer) {
+                window.clearTimeout(articleSearchTimer);
+            }
+
+            articleSearchTimer = window.setTimeout(function() {
+                runArticleSearch(shouldScrollToFirstMatch);
+                articleSearchTimer = null;
+            }, shouldScrollToFirstMatch ? 0 : 120);
         }
 
         function runArticleSearch(shouldScrollToFirstMatch) {
@@ -5907,16 +6043,24 @@
 
         if (articleSearchInput) {
             articleSearchInput.addEventListener('input', function() {
-                runArticleSearch(false);
+                scheduleArticleSearch(false);
             });
 
             articleSearchInput.addEventListener('keydown', function(event) {
                 if (event.key === 'Enter') {
                     event.preventDefault();
+                    if (articleSearchTimer) {
+                        window.clearTimeout(articleSearchTimer);
+                        articleSearchTimer = null;
+                    }
                     runArticleSearch(true);
                 }
 
                 if (event.key === 'Escape') {
+                    if (articleSearchTimer) {
+                        window.clearTimeout(articleSearchTimer);
+                        articleSearchTimer = null;
+                    }
                     articleSearchInput.value = '';
                     clearSearchState();
                 }
@@ -5931,7 +6075,21 @@
         }
 
         navLinks.forEach(function(link) {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function(event) {
+                var targetId = (link.getAttribute('href') || '').replace('#', '');
+
+                if (targetId) {
+                    event.preventDefault();
+                    scrollToSection(targetId);
+                    if (window.history && window.history.replaceState) {
+                        try {
+                            window.history.replaceState(null, '', '#' + targetId);
+                        } catch (error) {
+                            window.location.hash = targetId;
+                        }
+                    }
+                }
+
                 if (window.innerWidth <= 992) {
                     setTocExpanded(false);
                 }
@@ -6463,8 +6621,24 @@
             updateActiveSection();
         }
 
-        window.addEventListener('scroll', handleWindowScroll, { passive: true });
-        window.addEventListener('resize', syncTocForViewport);
+        function requestScrollUpdate() {
+            if (scrollTicking) {
+                return;
+            }
+
+            scrollTicking = true;
+            window.requestAnimationFrame(function() {
+                handleWindowScroll();
+                scrollTicking = false;
+            });
+        }
+
+        window.addEventListener('scroll', requestScrollUpdate, { passive: true });
+        window.addEventListener('resize', function() {
+            syncTocForViewport();
+            requestScrollUpdate();
+        });
+        window.addEventListener('orientationchange', syncTocForViewport);
 
         updateResearchMetrics();
         renderPrintReportShell();
