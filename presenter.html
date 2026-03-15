@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presenter Mode | القضية الفلسطينية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="presenter.css">
+</head>
+<body class="presenter-body">
+    <div class="blackout-layer" id="blackoutLayer" hidden></div>
+
+    <header class="presenter-topbar">
+        <div class="presenter-brand">
+            <span class="presenter-kicker">Presenter Mode</span>
+            <strong>عرض شفهي جاهز للمناقشة</strong>
+            <small>القضية الفلسطينية ويحيى السنوار في إطار المواطنة العالمية</small>
+        </div>
+
+        <div class="presenter-status">
+            <div class="status-pill">
+                <span>الشريحة</span>
+                <strong id="currentSlideLabel">1 / 10</strong>
+            </div>
+            <div class="status-pill">
+                <span>المؤقت</span>
+                <strong id="presenterTimer">00:00</strong>
+            </div>
+        </div>
+
+        <div class="presenter-toolbar">
+            <a class="toolbar-link" href="index.html">العودة للموقع</a>
+            <a class="toolbar-link" href="appendices.html">الملاحق</a>
+            <button class="toolbar-btn" type="button" id="startPauseTimerBtn">بدء المؤقت</button>
+            <button class="toolbar-btn" type="button" id="resetTimerBtn">إعادة ضبط</button>
+            <button class="toolbar-btn" type="button" id="notesToggleBtn">إخفاء الملاحظات</button>
+            <button class="toolbar-btn" type="button" id="blackoutToggleBtn">شاشة سوداء</button>
+            <button class="toolbar-btn is-primary" type="button" id="fullscreenBtn">ملء الشاشة</button>
+        </div>
+    </header>
+
+    <main class="presenter-shell">
+        <aside class="presenter-sidebar">
+            <section class="sidebar-card">
+                <span class="presenter-kicker">مخطط العرض</span>
+                <h2>ترتيب الشرائح</h2>
+                <p>هذه القائمة تساعدك على القفز السريع بين الشرائح أثناء المراجعة أو المناقشة.</p>
+                <div class="slide-list" id="slideList"></div>
+            </section>
+
+            <section class="sidebar-card">
+                <span class="presenter-kicker">اختصارات</span>
+                <h2>مفاتيح مفيدة أثناء العرض</h2>
+                <ul class="shortcut-list">
+                    <li><strong>السهمان</strong><span>للتنقل بين الشرائح</span></li>
+                    <li><strong>F</strong><span>ملء الشاشة</span></li>
+                    <li><strong>N</strong><span>إظهار أو إخفاء الملاحظات</span></li>
+                    <li><strong>B</strong><span>تفعيل الشاشة السوداء</span></li>
+                    <li><strong>T</strong><span>إعادة ضبط المؤقت</span></li>
+                    <li><strong>Home / End</strong><span>البداية أو النهاية</span></li>
+                </ul>
+            </section>
+        </aside>
+
+        <section class="presenter-stage">
+            <div class="stage-topline">
+                <span class="stage-kicker" id="slideKicker">الافتتاح</span>
+                <a class="stage-link" id="sourceAnchorLink" href="index.html#intro">الانتقال إلى القسم الأصلي</a>
+            </div>
+
+            <article class="slide-card">
+                <div class="slide-badge" id="slideBadge">التكليف</div>
+                <h1 id="slideTitle">عنوان الشريحة</h1>
+                <p class="slide-lead" id="slideLead">تمهيد موجز يضبط طريقة الإلقاء في هذه الشريحة.</p>
+
+                <div class="slide-grid">
+                    <div class="slide-main">
+                        <ul class="slide-bullets" id="slideBullets"></ul>
+                    </div>
+
+                    <aside class="slide-side">
+                        <div class="slide-quote-card">
+                            <span>جملة محورية</span>
+                            <blockquote id="slideQuote"></blockquote>
+                            <p id="slideFooter"></p>
+                        </div>
+                    </aside>
+                </div>
+            </article>
+
+            <aside class="speaker-notes" id="speakerNotesPanel">
+                <div class="speaker-notes-head">
+                    <span class="presenter-kicker">ملاحظات المتحدث</span>
+                    <strong>ماذا تقول؟ وكيف تنتقل؟</strong>
+                </div>
+                <div class="notes-grid">
+                    <article class="note-card">
+                        <span>هدف الشريحة</span>
+                        <p id="speakerObjective"></p>
+                    </article>
+                    <article class="note-card">
+                        <span>جملة انتقالية</span>
+                        <p id="speakerTransition"></p>
+                    </article>
+                    <article class="note-card">
+                        <span>إذا سُئلت عنها</span>
+                        <p id="speakerAnswer"></p>
+                    </article>
+                </div>
+            </aside>
+
+            <div class="presenter-bottom">
+                <button class="nav-btn" type="button" id="prevSlideBtn">الشريحة السابقة</button>
+                <div class="progress-shell" aria-hidden="true">
+                    <span class="progress-fill" id="presenterProgressBar"></span>
+                </div>
+                <button class="nav-btn is-primary" type="button" id="nextSlideBtn">الشريحة التالية</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="presenter.js"></script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+:root {
+    --primary: #115d3a;
+    --primary-dark: #0a3d25;
+    --accent: #a82020;
+    --gold: #d0ad69;
+    --bg: #f5f1e8;
+    --panel: #ffffff;
+    --ink: #1f2937;
+    --muted: #64748b;
+    --border: #d9e3d7;
+    --shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body.appendices-body {
+    font-family: 'Amiri', serif;
+    color: var(--ink);
+    background:
+        radial-gradient(circle at top left, rgba(208, 173, 105, 0.18), transparent 24%),
+        linear-gradient(180deg, #f6f1e7 0%, #efe9db 100%);
+}
+
+.appendix-hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 24px;
+    align-items: stretch;
+    padding: 36px 32px 24px;
+    background:
+        linear-gradient(135deg, rgba(17, 93, 58, 0.94), rgba(11, 36, 27, 0.98)),
+        radial-gradient(circle at top right, rgba(208, 173, 105, 0.22), transparent 30%);
+    color: #fff;
+}
+
+.appendix-kicker {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 0 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--gold);
+    font-family: 'Tajawal', sans-serif;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.appendix-hero-copy h1 {
+    margin: 16px 0 14px;
+    color: #fff3d6;
+    font-family: 'Aref Ruqaa', serif;
+    font-size: clamp(36px, 4vw, 56px);
+    line-height: 1.45;
+}
+
+.appendix-hero-copy p {
+    max-width: 860px;
+    margin: 0;
+    color: #e6efe8;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 18px;
+    line-height: 1.95;
+}
+
+.appendix-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.appendix-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 18px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.appendix-link.is-primary {
+    background: linear-gradient(135deg, var(--gold), #efd59c);
+    color: #11231b;
+}
+
+.appendix-hero-panel {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    align-content: start;
+}
+
+.hero-stat {
+    padding: 20px 18px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+}
+
+.hero-stat span {
+    display: block;
+    margin-bottom: 8px;
+    color: #cbd5e1;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 13px;
+}
+
+.hero-stat strong {
+    color: #fff4d8;
+    font-family: 'Aref Ruqaa', serif;
+    font-size: 30px;
+}
+
+.appendix-layout {
+    display: grid;
+    grid-template-columns: 290px minmax(0, 1fr);
+    gap: 24px;
+    padding: 28px 32px 40px;
+}
+
+.appendix-toc {
+    position: sticky;
+    top: 20px;
+    align-self: start;
+}
+
+.toc-card,
+.prose-card,
+.matrix-card,
+.evidence-card,
+.discussion-card,
+.reference-group {
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(17, 93, 58, 0.08);
+    box-shadow: var(--shadow);
+}
+
+.toc-card {
+    padding: 22px;
+}
+
+.toc-card nav {
+    display: grid;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.toc-card a {
+    display: block;
+    padding: 12px 14px;
+    border-radius: 16px;
+    background: rgba(17, 93, 58, 0.04);
+    color: var(--primary);
+    text-decoration: none;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.appendix-content {
+    display: grid;
+    gap: 22px;
+}
+
+.appendix-section {
+    display: grid;
+    gap: 16px;
+}
+
+.section-head h2 {
+    margin: 10px 0 0;
+    color: var(--primary);
+    font-family: 'Aref Ruqaa', serif;
+    font-size: clamp(30px, 3vw, 40px);
+    line-height: 1.5;
+}
+
+.prose-card,
+.matrix-card,
+.reference-group {
+    padding: 24px;
+}
+
+.matrix-card {
+    overflow-x: auto;
+}
+
+.prose-card p {
+    margin: 0 0 14px;
+    font-size: 18px;
+    line-height: 2.1;
+}
+
+.matrix-grid,
+.evidence-grid,
+.discussion-grid,
+.reference-groups {
+    display: grid;
+    gap: 18px;
+}
+
+.matrix-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.matrix-card-wide {
+    grid-column: 1 / -1;
+}
+
+.matrix-card h3,
+.reference-group h3 {
+    margin: 0 0 16px;
+    color: var(--primary);
+    font-family: 'Aref Ruqaa', serif;
+    font-size: 28px;
+}
+
+.appendix-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+.appendix-table th,
+.appendix-table td {
+    padding: 14px 16px;
+    border: 1px solid rgba(17, 93, 58, 0.08);
+    text-align: right;
+    vertical-align: top;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.appendix-table th {
+    background: rgba(17, 93, 58, 0.08);
+    color: var(--primary);
+    font-weight: 900;
+}
+
+.appendix-table td {
+    background: rgba(255, 255, 255, 0.82);
+}
+
+.evidence-grid,
+.discussion-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.evidence-card,
+.discussion-card {
+    padding: 20px;
+}
+
+.evidence-card h3,
+.discussion-card strong {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--accent);
+    font-family: 'Tajawal', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.evidence-card p,
+.discussion-card p,
+.reference-group li,
+.reference-group span {
+    margin: 0;
+    color: var(--muted);
+    font-family: 'Tajawal', sans-serif;
+    font-size: 14px;
+    line-height: 1.95;
+}
+
+.reference-group ol {
+    margin: 0;
+    padding-inline-start: 20px;
+    display: grid;
+    gap: 12px;
+}
+
+.reference-group a,
+.reference-group em {
+    color: var(--primary);
+    font-weight: 900;
+}
+
+.reference-group span {
+    display: block;
+    margin-top: 4px;
+}
+
+@media (max-width: 1100px) {
+    .appendix-hero,
+    .appendix-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .appendix-toc {
+        position: relative;
+        top: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .appendix-hero,
+    .appendix-layout {
+        padding: 20px 16px;
+    }
+
+    .appendix-actions,
+    .appendix-hero-panel,
+    .matrix-grid,
+    .evidence-grid,
+    .discussion-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .appendix-link {
+        width: 100%;
+    }
+
+    .prose-card p {
+        font-size: 16px;
+    }
+}

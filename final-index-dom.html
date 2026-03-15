@@ -1,0 +1,1626 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl" style="--font-scale: 1;"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    
+    <title>البحث الأكاديمي: القضية الفلسطينية - بدر البوسعيدي</title>
+    
+    <!-- SEO و Open Graph -->
+    <meta name="description" content="دراسة تحليلية في إطار المواطنة العالمية: يحيى السنوار وعلاقته بمسار القضية الفلسطينية. بحث أكاديمي محكم.">
+    <meta name="theme-color" content="#115d3a">
+    <meta name="keywords" content="القضية الفلسطينية, يحيى السنوار, المواطنة العالمية, حقوق الإنسان, الصراع العربي الإسرائيلي">
+    <meta name="author" content="بدر عبدالله هلال البوسعيدي">
+    <meta property="og:title" content="البحث الأكاديمي: القضية الفلسطينية وتطوراتها">
+    <meta property="og:description" content="دراسة تحليلية في إطار المواطنة العالمية.">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ar_AR">
+    
+    <!-- الخطوط والأيقونات -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&amp;family=Aref+Ruqaa:wght@400;700&amp;family=Noto+Naskh+Arabic:wght@400;600;700&amp;family=Tajawal:wght@500;700;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">تجاوز إلى المحتوى الرئيسي</a>
+
+<!-- شريط التقدم -->
+<div class="progress-container"><div class="progress-bar" id="progressBar" style="width: 0%;"></div></div>
+
+<!-- الأزرار العائمة -->
+<div class="floating-actions">
+    <button class="action-btn" id="themeToggle" title="الوضع الليلي" aria-label="تبديل الوضع الليلي"><i class="fas fa-moon" id="themeIcon"></i></button>
+    <button class="action-btn" id="shareBtn" title="مشاركة البحث" aria-label="مشاركة البحث"><i class="fas fa-share-alt"></i></button>
+    <button class="action-btn" id="commandPaletteBtn" title="مركز الأوامر" aria-label="فتح مركز الأوامر السريع"><i class="fas fa-compass"></i></button>
+    <button class="action-btn" onclick="window.print()" title="حفظ كـ PDF" aria-label="طباعة أو حفظ البحث كملف PDF"><i class="fas fa-file-pdf"></i></button>
+    <button class="action-btn" id="backToTop" title="العودة للأعلى" aria-label="العودة إلى أعلى الصفحة"><i class="fas fa-arrow-up"></i></button>
+</div>
+
+<div class="live-toast" id="liveToast" aria-live="polite" aria-atomic="true"></div>
+
+<div class="command-palette" id="commandPalette" hidden="">
+    <div class="command-palette-backdrop" data-close-palette=""></div>
+    <div class="command-palette-panel" role="dialog" aria-modal="true" aria-labelledby="commandPaletteTitle">
+        <div class="command-palette-head">
+            <div>
+                <span class="palette-kicker">الوصول السريع</span>
+                <h2 id="commandPaletteTitle">مركز الأوامر والبحث الذكي</h2>
+            </div>
+            <button class="palette-close" type="button" id="commandPaletteClose">إغلاق</button>
+        </div>
+        <div class="palette-search-shell">
+            <i class="fas fa-bolt" aria-hidden="true"></i>
+            <input type="search" id="paletteSearch" placeholder="ابحث عن محور، مفهوم، أو أمر سريع...">
+        </div>
+        <p class="palette-meta" id="paletteMeta">تظهر الآن 12 نتيجة سريعة.</p>
+        <div class="palette-shortcuts" aria-label="اقتراحات سريعة">
+            <button class="palette-shortcut" type="button" data-palette-shortcut="محور">محور</button>
+            <button class="palette-shortcut" type="button" data-palette-shortcut="مفهوم">مفهوم</button>
+            <button class="palette-shortcut" type="button" data-palette-shortcut="النكبة">النكبة</button>
+            <button class="palette-shortcut" type="button" data-palette-shortcut="ملاحظات">ملاحظات</button>
+        </div>
+        <div class="palette-results" id="paletteResults"><button type="button" class="palette-result" data-action="section" data-value="intro"><small>محور</small><strong>تعريف القضية</strong><span>تعتبر القضية الفلسطينية واحدة من أبرز وأطول النزاعات في العصر الحديث. تدور القضية بشكل أساسي حول حق</span></button><button type="button" class="palette-result" data-action="section" data-value="causes"><small>محور</small><strong>الأسباب التاريخية</strong><span>يمكن تلخيص الأسباب التي أدت إلى ظهور هذه القضية واستمرارها في عدة نقاط رئيسية:</span></button><button type="button" class="palette-result" data-action="section" data-value="impact"><small>محور</small><strong>التداعيات الحقوقية</strong><span>أشارت تقارير حديثة لمنظمات حقوقية معروفة، مثل هيومن رايتس ووتش ومنظمة العفو الدولية، إلى أن السياسات</span></button><button type="button" class="palette-result" data-action="section" data-value="global"><small>محور</small><strong>التأثير العالمي</strong><span>لم تعد القضية محصورة في الجانب الإقليمي، بل امتد تأثيرها ليشمل:</span></button><button type="button" class="palette-result" data-action="section" data-value="persona"><small>محور</small><strong>يحيى السنوار</strong><span>يحيى السنوار (1962 - 2024) كان شخصية سياسية وعسكرية بارزة في الساحة الفلسطينية، وشغل منصب رئيس المكت</span></button><button type="button" class="palette-result" data-action="section" data-value="events"><small>محور</small><strong>أحداث ميدانية</strong><span>في عام 2018، دعمت القيادة في غزة مسيرات شعبية واسعة نحو الحدود للمطالبة بفك الحصار. ورغم التكلفة الب</span></button><button type="button" class="palette-result" data-action="section" data-value="analysis"><small>محور</small><strong>تحليل الأثر</strong><span>تحليل أثر الشخصية في تطورات القضية
+المحور 7
+1 د قراءة
+نسخ الرابط
+حفظ
+طي
+استماع
+إعادة الاهتمام الدولي</span></button><button type="button" class="palette-result" data-action="section" data-value="solutions"><small>محور</small><strong>حلول ومقترحات</strong><span>الجزء الثالث: حلول ومقترحات قابلة للتنفيذ
+المحور 8
+1 د قراءة
+نسخ الرابط
+حفظ
+طي
+استماع
+1. على مستوى ا</span></button><button type="button" class="palette-result" data-action="section" data-value="reflection"><small>محور</small><strong>الخلاصة</strong><span>من خلال إعدادي لهذا التقرير، تعلمت أن الأزمات العالمية الممتدة لا يمكن فهمها بمعزل عن الظروف الإنسان</span></button><button type="button" class="palette-result" data-action="section" data-value="references"><small>محور</small><strong>المصادر</strong><span>أعيد تنظيم هذا القسم ليضم مصادر حقيقية وموثقة، موزعة بين مراجع أممية وقانونية وحقوقية وأكاديمية واقت</span></button><button type="button" class="palette-result" data-action="glossary" data-value="النكبة"><small>مفهوم</small><strong>النكبة</strong><span>تشير النكبة إلى التهجير الجماعي وتدمير البنية الاجتماعية والمكانية للفلسطينيين سنة 1948، وهي ليست حد</span></button><button type="button" class="palette-result" data-action="glossary" data-value="حق العودة"><small>مفهوم</small><strong>حق العودة</strong><span>يرتبط حق العودة بإمكانية رجوع اللاجئين الفلسطينيين إلى ديارهم وتعويضهم، ويشكّل أحد أكثر محاور القضية</span></button></div>
+    </div>
+</div>
+
+<!-- الهيرو (Hero) -->
+<header class="hero-section">
+    <div class="hero-content">
+        <div class="hero-uni"><i class="fas fa-university"></i> جامعة السلطان قابوس | كلية الاقتصاد والعلوم السياسية</div>
+        <h1 class="hero-title">القضية الفلسطينية وتطوراتها في الساحة الدولية</h1>
+        <p class="hero-subtitle">دراسة تحليلية في إطار المواطنة العالمية: يحيى السنوار وعلاقته بمسار القضية</p>
+        <div class="hero-ribbon" aria-label="ملامح التكليف الأكاديمي">
+            <span class="hero-pill"><i class="fas fa-layer-group"></i> ثلاثة أجزاء مترابطة</span>
+            <span class="hero-pill"><i class="fas fa-calendar-alt"></i> التسليم: 28 مارس 2026</span>
+            <span class="hero-pill"><i class="fas fa-file-alt"></i> التقرير: حتى 8 صفحات</span>
+            <span class="hero-pill"><i class="fas fa-chalkboard-teacher"></i> العرض: حتى 20 شريحة</span>
+        </div>
+        
+        <div class="hero-actions">
+            <a class="hero-btn hero-btn-primary" href="#intro">ابدأ القراءة</a>
+            <a class="hero-btn hero-btn-secondary" href="#references">الانتقال إلى المصادر</a>
+        </div>
+        
+        <div class="student-badge">
+            <p><i class="fas fa-user-graduate"></i> الباحث: <strong>بدر عبدالله هلال البوسعيدي</strong></p>
+            <p><i class="fas fa-id-badge"></i> الرقم الجامعي: <strong>150085</strong></p>
+            <p><i class="fas fa-book-open"></i> المقرر: المواطنة العالمية (G_STUDIES) - ربيع 2026</p>
+        </div>
+
+        <div class="hero-metrics" aria-label="مؤشرات البحث">
+            <div class="metric-card">
+                <span>محاور البحث</span>
+                <strong id="metricSections">10</strong>
+            </div>
+            <div class="metric-card">
+                <span>المراجع المعتمدة</span>
+                <strong id="metricReferences">15</strong>
+            </div>
+            <div class="metric-card">
+                <span>مدة القراءة</span>
+                <strong id="metricReadingTime">15 د</strong>
+            </div>
+            <div class="metric-card">
+                <span>الصور التوضيحية</span>
+                <strong id="metricFigures">6</strong>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="print-report-shell" id="printReportShell" aria-hidden="true"></section>
+
+<section class="research-dashboard" aria-label="ملخصات البحث">
+    <div class="dashboard-grid">
+        <article class="overview-card">
+            <span class="overview-kicker">المدخل</span>
+            <h2>القضية في جوهرها قضية حق وذاكرة وعدالة دولية</h2>
+            <p>يعرض البحث الجذور التاريخية والسياسية والإنسانية، ثم يربطها بالتحولات الدولية والفاعلين المؤثرين في مسارها.</p>
+        </article>
+        <article class="overview-card">
+            <span class="overview-kicker">محور إنساني</span>
+            <h2>النكبة واللجوء والحصار ليست عناوين ثانوية بل صلب التجربة الفلسطينية</h2>
+            <p>تُقرأ التداعيات هنا من زاوية الحقوق الأساسية، من النزوح والكرامة إلى القدرة على الحياة والتنمية.</p>
+        </article>
+        <article class="overview-card">
+            <span class="overview-kicker">محور دولي</span>
+            <h2>الملف الفلسطيني يختبر صدقية القانون الدولي ومؤسساته</h2>
+            <p>يعالج المقال أدوار المحكمة الدولية، الأمم المتحدة، والمجتمع المدني العالمي في إعادة إبقاء القضية في الواجهة.</p>
+        </article>
+        <article class="overview-card">
+            <span class="overview-kicker">محور الشخصية</span>
+            <h2>يحيى السنوار يُقرأ هنا بوصفه نتاجًا لبيئة الصراع لا حدثًا منفصلًا عنها</h2>
+            <p>يناقش البحث كيف تتشكّل الشخصيات السياسية الحادة داخل السياقات الممتدة من الاحتلال والحصار وغياب الأفق.</p>
+        </article>
+    </div>
+</section>
+
+<section class="project-brief reveal" aria-label="الملخص التنفيذي وجاهزية التكليف">
+    <div class="project-brief-grid">
+        <article class="brief-card" aria-labelledby="executiveSummaryTitle">
+            <div class="brief-card-head">
+                <span class="experience-kicker">ملخص تنفيذي</span>
+                <h2 id="executiveSummaryTitle">واجهة سريعة توضّح جوهر البحث قبل الدخول في التفاصيل</h2>
+                <p>هذا الملخص يختصر القضية، الشخصية، والربط بينهما في صياغة جاهزة للمراجعة السريعة أو للتحضير قبل التسليم والمناقشة.</p>
+            </div>
+            <div class="executive-points">
+                <article class="executive-point">
+                    <strong>القضية</strong>
+                    <p>يقرأ الموقع القضية الفلسطينية بوصفها قضية حقوق وعدالة وذاكرة وتداعيات عالمية، لا مجرد نزاع حدودي محدود.</p>
+                </article>
+                <article class="executive-point">
+                    <strong>الشخصية</strong>
+                    <p>يعرض يحيى السنوار ضمن سياق الصراع الممتد، باعتباره نتاجًا لبيئة اللجوء والحصار والانسداد السياسي.</p>
+                </article>
+                <article class="executive-point">
+                    <strong>الربط</strong>
+                    <p>يربط البحث بين الجذور التاريخية والتحولات الدولية والشخصية المؤثرة ليصل إلى حلول عملية ورؤية مواطنة عالمية.</p>
+                </article>
+            </div>
+            <div class="brief-actions">
+                <button class="route-btn" type="button" id="activatePresentationModeBtn">تهيئة وضع العرض</button>
+                <button class="route-btn" type="button" id="copyExecutiveSummaryBtn">نسخ الملخص التنفيذي</button>
+            </div>
+            <div class="brief-meta-grid" aria-label="ملخص سريع لمكونات العمل">
+                <div class="brief-meta-card">
+                    <span>المسار المقترح للمراجعة</span>
+                    <strong>الخلاصة والعرض</strong>
+                </div>
+                <div class="brief-meta-card">
+                    <span>نوع التسليم المستهدف</span>
+                    <strong>تقرير + عرض</strong>
+                </div>
+            </div>
+        </article>
+
+        <article class="brief-card" aria-labelledby="rubricReadyTitle">
+            <div class="brief-card-head">
+                <span class="experience-kicker">جاهزية التكليف</span>
+                <h2 id="rubricReadyTitle">مطابقة سريعة مع متطلبات المشروع الجامعي</h2>
+                <p>هذه اللوحة لا تستبدل التقييم الأكاديمي، لكنها تعطيك مؤشراً عملياً يوضح أن بنية الموقع تغطي معظم عناصر rubric المطلوبة.</p>
+            </div>
+            <div class="rubric-grid">
+                <article class="rubric-item">
+                    <span class="rubric-state is-ready" id="rubricIssueState">جاهز</span>
+                    <div class="rubric-copy">
+                        <strong>وضوح القضية وتحليلها</strong>
+                        <span>يتحقق بوجود المدخل، الأسباب، التداعيات، والتأثير العالمي داخل المتن.</span>
+                    </div>
+                </article>
+                <article class="rubric-item">
+                    <span class="rubric-state is-ready" id="rubricPersonaState">جاهز</span>
+                    <div class="rubric-copy">
+                        <strong>عرض الشخصية وإنجازاتها</strong>
+                        <span>يتحقق بوجود قسم الشخصية، الأحداث، وتحليل الأثر المرتبط بها.</span>
+                    </div>
+                </article>
+                <article class="rubric-item">
+                    <span class="rubric-state is-ready" id="rubricSolutionsState">جاهز</span>
+                    <div class="rubric-copy">
+                        <strong>الحلول والربط والتأمل</strong>
+                        <span>يتحقق بوجود الحلول والخلاصة وربط القضية بالشخصية في نهاية التقرير.</span>
+                    </div>
+                </article>
+                <article class="rubric-item">
+                    <span class="rubric-state is-ready" id="rubricReferencesState">جاهز</span>
+                    <div class="rubric-copy">
+                        <strong>المراجع والوسائط</strong>
+                        <span>يتحقق بتوافر عدد كافٍ من المراجع الموثوقة والصور والوسائط الداعمة.</span>
+                    </div>
+                </article>
+            </div>
+            <p class="brief-ready-note" id="submissionReadinessMeta">الرصد الحالي: 10 محاور، و15 مرجعًا، و6 صورًا داعمة. هذا يمنح العمل قاعدة قوية جدًا للتقرير والعرض معًا.</p>
+        </article>
+    </div>
+</section>
+
+<section class="submission-suite reveal" aria-label="جاهزية التسليم والمناقشة">
+    <div class="submission-grid">
+        <article class="submission-card" aria-labelledby="deadlineSuiteTitle">
+            <div class="submission-card-head">
+                <span class="experience-kicker">جاهزية التسليم</span>
+                <h2 id="deadlineSuiteTitle">لوحة متابعة قبل موعد 28 مارس 2026</h2>
+                <p>مؤشرات سريعة تساعدك على معرفة الوقت المتبقي، وتحويل الموقع إلى أداة تحضير للتسليم والعرض والمناقشة.</p>
+            </div>
+            <div class="countdown-grid">
+                <div class="countdown-card">
+                    <span>الأيام المتبقية</span>
+                    <strong id="submissionCountdownDays">14</strong>
+                </div>
+                <div class="countdown-card">
+                    <span>الساعات المتبقية</span>
+                    <strong id="submissionCountdownHours">0</strong>
+                </div>
+            </div>
+            <p class="countdown-note" id="submissionCountdownStatus">الموعد النهائي المحدد هو 28 مارس 2026. استخدم الوقت المتبقي لمراجعة التقرير والطباعة والعرض الشفهي.</p>
+            <div class="brief-actions">
+                <button class="route-btn" type="button" id="copySubmissionChecklistBtn">نسخ خطة التسليم</button>
+                <button class="route-btn" type="button" id="copyOralOpeningBtn">نسخ مقدمة شفوية</button>
+            </div>
+        </article>
+
+        <article class="submission-card" aria-labelledby="readinessChecklistTitle">
+            <div class="submission-card-head">
+                <span class="experience-kicker">خطة جاهزة</span>
+                <h2 id="readinessChecklistTitle">قائمة تحقق عملية قبل الرفع</h2>
+                <p>ملخص واضح لما يحتاجه التقرير والعرض حتى يكون التسليم منظمًا واحترافيًا ومتوافقًا مع متطلبات المقرر.</p>
+            </div>
+            <div class="readiness-list" aria-label="قائمة تحقق التسليم">
+                <div class="readiness-row">
+                    <div><strong>القضية وتحليلها</strong><span>مقدمة، أسباب، تداعيات، وتأثير عالمي.</span></div>
+                    <span class="readiness-badge is-strong">موجود</span>
+                </div>
+                <div class="readiness-row">
+                    <div><strong>الشخصية والربط</strong><span>نبذة، أحداث، وتحليل دورها في مسار القضية.</span></div>
+                    <span class="readiness-badge is-strong">موجود</span>
+                </div>
+                <div class="readiness-row">
+                    <div><strong>الصور والمراجع</strong><span>وسائط داعمة ومراجع موثوقة ومتنوعة.</span></div>
+                    <span class="readiness-badge is-strong">موجود</span>
+                </div>
+                <div class="readiness-row">
+                    <div><strong>نسخة المناقشة</strong><span>نسخ سريعة للعرض والملخص والخط الزمني.</span></div>
+                    <span class="readiness-badge is-strong" id="presentationPrepBadge">جاهز</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="submission-card" aria-labelledby="defensePrepTitle">
+            <div class="submission-card-head">
+                <span class="experience-kicker">الدفاع الشفهي</span>
+                <h2 id="defensePrepTitle">أسئلة متوقعة مع صياغات جواب قصيرة</h2>
+                <p>هذه الزاوية تفيدك قبل المناقشة إذا احتجت إجابات مختصرة وواضحة عن سبب الاختيار والربط والحلول.</p>
+            </div>
+            <div class="qa-list">
+                <article class="qa-item">
+                    <strong>لماذا اخترت هذه القضية؟</strong>
+                    <p>لأنها تجمع بين حقوق الإنسان والعدالة الدولية والذاكرة التاريخية، وتمثل اختبارًا مباشرًا لفكرة المواطنة العالمية.</p>
+                </article>
+                <article class="qa-item">
+                    <strong>لماذا هذه الشخصية تحديدًا؟</strong>
+                    <p>لأنها تساعد على فهم كيف تتشكل الشخصيات المؤثرة داخل بيئة الصراع، لا بوصفها حالة منفصلة عن الظروف الممتدة.</p>
+                </article>
+                <article class="qa-item">
+                    <strong>ما الذي يميز عملك؟</strong>
+                    <p>أنه لا يكتفي بعرض القضية، بل يربطها بشخصية مؤثرة، ويقدم مسارًا تحليليًا ومراجع موثوقة وحلولًا قابلة للنقاش.</p>
+                </article>
+            </div>
+            <div class="brief-actions">
+                <button class="route-btn" type="button" id="copyDefenseAnswersBtn">نسخ أجوبة المناقشة</button>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="report-command-center reveal" aria-label="غرفة تنظيم التقرير والتكليف">
+    <div class="report-command-head">
+        <span class="analysis-kicker">غرفة التنظيم الأكاديمي</span>
+        <h2>طبقة أكبر تضبط التقرير والعرض والمناقشة وفق هيكل التكليف نفسه</h2>
+        <p>هذه المساحة لا تضيف زخرفة فقط، بل تحوّل الموقع إلى ملف تسليم متكامل: متابعة لبنود التقييم، خطة شفوية بالدقائق، ومسارات جاهزة تربط بين القضية والشخصية والحلول بصورة مرتبة تصلح للمراجعة والطباعة والنقاش.</p>
+        <div class="report-command-actions">
+            <a class="command-center-link is-primary" href="presenter.html">فتح Presenter Mode</a>
+            <a class="command-center-link" href="appendices.html">فتح صفحة الملاحق</a>
+        </div>
+    </div>
+
+    <div class="report-command-grid">
+        <article class="command-center-card" aria-labelledby="rubricMonitorTitle">
+            <div class="command-center-headline">
+                <span class="experience-kicker">لوحة التقييم</span>
+                <h2 id="rubricMonitorTitle">مراقبة حيّة لمعيار التكليف بندًا بندًا</h2>
+                <p>يتم تحديث هذه اللوحة تلقائيًا من محتوى الموقع الحالي لتوضّح مدى تغطية عناصر rubric المطلوبة في التقرير والعرض.</p>
+            </div>
+            <div class="rubric-progress">
+                <div class="rubric-progress-track" aria-hidden="true">
+                    <span id="rubricCompletionBar" style="width: 100%;"></span>
+                </div>
+                <div class="rubric-progress-meta">
+                    <strong id="rubricCompletionPercent">100%</strong>
+                    <span id="rubricCompletionText">12 من 12 من عناصر التقييم مغطاة في النسخة الحالية من الموقع.</span>
+                </div>
+            </div>
+            <div class="criteria-list" aria-label="عناصر تقييم التكليف">
+                <div class="criteria-row"><span>1. وضوح اختيار القضية وتبريرها وتعريفها</span><strong class="criteria-badge is-ready" id="criterionIssueChoice">مغطى</strong></div>
+                <div class="criteria-row"><span>2. تحليل الأسباب التي أدت إلى نشوء القضية</span><strong class="criteria-badge is-ready" id="criterionCauses">مغطى</strong></div>
+                <div class="criteria-row"><span>3. شرح التداعيات وتأثيرها على المواطنة العالمية</span><strong class="criteria-badge is-ready" id="criterionImpact">مغطى</strong></div>
+                <div class="criteria-row"><span>4. تحليل التأثير العالمي على الدول والمجتمعات</span><strong class="criteria-badge is-ready" id="criterionGlobal">مغطى</strong></div>
+                <div class="criteria-row"><span>5. وضوح اختيار الشخصية وتقديم نبذة عنها</span><strong class="criteria-badge is-ready" id="criterionPersonaChoice">مغطى</strong></div>
+                <div class="criteria-row"><span>6. تقديم أمثلة ومواقف حقيقية لدور الشخصية</span><strong class="criteria-badge is-ready" id="criterionExamples">مغطى</strong></div>
+                <div class="criteria-row"><span>7. تحليل إنجازات الشخصية وأثرها الإيجابي</span><strong class="criteria-badge is-ready" id="criterionAchievements">مغطى</strong></div>
+                <div class="criteria-row"><span>8. تقديم حلول قابلة للتنفيذ</span><strong class="criteria-badge is-ready" id="criterionSolutions">مغطى</strong></div>
+                <div class="criteria-row"><span>9. تلخيص ما تم تعلمه والربط بين القضية والشخصية</span><strong class="criteria-badge is-ready" id="criterionReflection">مغطى</strong></div>
+                <div class="criteria-row"><span>10. استخدام الصور والمصادر والوسائط</span><strong class="criteria-badge is-ready" id="criterionMedia">مغطى</strong></div>
+                <div class="criteria-row"><span>11. تقديم مراجع موثوقة متنوعة</span><strong class="criteria-badge is-ready" id="criterionReferences">مغطى</strong></div>
+                <div class="criteria-row"><span>12. التنظيم والتنسيق وخلو العمل من الفوضى</span><strong class="criteria-badge is-ready" id="criterionFormatting">مغطى</strong></div>
+            </div>
+        </article>
+
+        <article class="command-center-card" aria-labelledby="oralPlanTitle">
+            <div class="command-center-headline">
+                <span class="experience-kicker">خطة العرض</span>
+                <h2 id="oralPlanTitle">تقسيم شفهي سريع يمكن قوله في 5 دقائق</h2>
+                <p>خطة منظمة تساعدك على التحرك بثقة في المناقشة دون تشتت، مع افتتاحية وخاتمة جاهزتين للنسخ والمراجعة.</p>
+            </div>
+            <div class="oral-plan" aria-label="خطة عرض شفهي">
+                <div class="oral-step">
+                    <strong>الدقيقة 1</strong>
+                    <p>عرّف القضية الفلسطينية واذكر سبب اختيارها بصفتها قضية عالمية تختبر العدالة وحقوق الإنسان.</p>
+                </div>
+                <div class="oral-step">
+                    <strong>الدقيقة 2</strong>
+                    <p>اشرح الجذور التاريخية وأبرز الأسباب التي أدت إلى استمرار القضية وتفاقم آثارها.</p>
+                </div>
+                <div class="oral-step">
+                    <strong>الدقيقة 3</strong>
+                    <p>انتقل إلى التداعيات الإنسانية والقانونية وتأثير القضية على المواطنة العالمية.</p>
+                </div>
+                <div class="oral-step">
+                    <strong>الدقيقة 4</strong>
+                    <p>قدم الشخصية العالمية المختارة، ثم اربطها بالقضية عبر الأمثلة والأحداث والتحليل.</p>
+                </div>
+                <div class="oral-step">
+                    <strong>الدقيقة 5</strong>
+                    <p>اختم بالحلول العملية وما تعلمته من الربط بين القضية والشخصية ودور المواطن العالمي.</p>
+                </div>
+            </div>
+            <div class="brief-actions">
+                <button class="route-btn" type="button" id="copyMinutePlanBtn">نسخ خطة 5 دقائق</button>
+                <button class="route-btn" type="button" id="copyClosingReflectionBtn">نسخ خاتمة شفوية</button>
+            </div>
+        </article>
+
+        <article class="command-center-card" aria-labelledby="assignmentMapTitle">
+            <div class="command-center-headline">
+                <span class="experience-kicker">خريطة التكليف</span>
+                <h2 id="assignmentMapTitle">توزيع العمل كما يطلبه المقرر بالضبط</h2>
+                <p>بدل بقاء المحاور متفرقة في الذهن، هذه الخريطة تربط كل جزء من التكليف بأقسام واضحة داخل الموقع لتسهيل المراجعة السريعة.</p>
+            </div>
+            <div class="assignment-flow" aria-label="خريطة أجزاء التكليف">
+                <div class="assignment-flow-row">
+                    <span class="assignment-flow-tag">الجزء الأول</span>
+                    <div class="assignment-flow-copy">
+                        <strong>القضية العالمية</strong>
+                        <p>ابدأ من تعريف القضية، ثم أسباب نشأتها، ثم التداعيات والتأثير العالمي.</p>
+                    </div>
+                    <a class="command-center-link" href="#intro">الانتقال</a>
+                </div>
+                <div class="assignment-flow-row">
+                    <span class="assignment-flow-tag">الجزء الثاني</span>
+                    <div class="assignment-flow-copy">
+                        <strong>الشخصية العالمية</strong>
+                        <p>انتقل إلى نبذة الشخصية، ثم الأمثلة والأحداث، ثم تحليل الإنجازات والأثر.</p>
+                    </div>
+                    <a class="command-center-link" href="#persona">الانتقال</a>
+                </div>
+                <div class="assignment-flow-row">
+                    <span class="assignment-flow-tag">الجزء الثالث</span>
+                    <div class="assignment-flow-copy">
+                        <strong>الحلول والاستفادة والتأمل</strong>
+                        <p>اختم بالحلول القابلة للتنفيذ، ثم الخلاصة، ثم المراجع التي تدعم العمل.</p>
+                    </div>
+                    <a class="command-center-link" href="#solutions">الانتقال</a>
+                </div>
+            </div>
+            <div class="command-mini-stats" aria-label="حدود التسليم">
+                <div class="mini-stat">
+                    <span>التقرير</span>
+                    <strong>حتى 8 صفحات</strong>
+                </div>
+                <div class="mini-stat">
+                    <span>العرض</span>
+                    <strong>حتى 20 شريحة</strong>
+                </div>
+                <div class="mini-stat">
+                    <span>البديل الرقمي</span>
+                    <strong>حتى 5 دقائق</strong>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <div class="report-matrix-grid">
+        <article class="matrix-card" aria-labelledby="issueMatrixTitle">
+            <div class="command-center-headline">
+                <span class="experience-kicker">مصفوفة القضية</span>
+                <h2 id="issueMatrixTitle">تلخيص مركز لأهم محاور القضية</h2>
+            </div>
+            <table class="report-table">
+                <thead>
+                    <tr>
+                        <th>المحور</th>
+                        <th>الخلاصة</th>
+                        <th>الأثر العالمي</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>الجذور التاريخية</td>
+                        <td>وعد بلفور والانتداب والنكبة أسست لبنية صراع ممتدة.</td>
+                        <td>تحولت القضية إلى ملف حاضر في الذاكرة الدولية والمؤسسات الأممية.</td>
+                    </tr>
+                    <tr>
+                        <td>التداعيات الإنسانية</td>
+                        <td>اللجوء والحصار والقيود المعيشية تؤثر على الحياة اليومية والحقوق الأساسية.</td>
+                        <td>تضع المجتمع الدولي أمام اختبار أخلاقي وقانوني مستمر.</td>
+                    </tr>
+                    <tr>
+                        <td>التأثير القانوني</td>
+                        <td>الاستيطان واستخدام القوة ومسألة الحماية كلها ملفات مرتبطة بالقانون الدولي.</td>
+                        <td>تمتد آثارها إلى النقاش العالمي حول العدالة والازدواجية في تطبيق المعايير.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+
+        <article class="matrix-card" aria-labelledby="personaMatrixTitle">
+            <div class="command-center-headline">
+                <span class="experience-kicker">مصفوفة الشخصية</span>
+                <h2 id="personaMatrixTitle">لماذا ترتبط الشخصية بالقضية في هذا البحث؟</h2>
+            </div>
+            <table class="report-table">
+                <thead>
+                    <tr>
+                        <th>المحطة</th>
+                        <th>الدلالة</th>
+                        <th>صلة ذلك بالقضية</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>النشأة والسجن</td>
+                        <td>تكشف كيف تصوغ البيئة السياسية مسار الشخصية العامة.</td>
+                        <td>يظهر الارتباط بين التجربة الفردية والبنية التاريخية للصراع.</td>
+                    </tr>
+                    <tr>
+                        <td>مسيرات العودة</td>
+                        <td>تقدم مثالًا على التفاعل بين الفعل الشعبي والقيادة السياسية.</td>
+                        <td>تعكس مركزية حق العودة والحصار في الخطاب الفلسطيني.</td>
+                    </tr>
+                    <tr>
+                        <td>تحولات 2021 و2023</td>
+                        <td>توضح انتقال القضية إلى مستويات إقليمية ودولية أشد تعقيدًا.</td>
+                        <td>تؤكد أن الشخصيات المؤثرة لا تُفهم خارج سياقها التاريخي والميداني.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+
+        <article class="matrix-card matrix-card-wide" aria-labelledby="solutionsMatrixTitle">
+            <div class="command-center-headline">
+                <span class="experience-kicker">مصفوفة الحلول</span>
+                <h2 id="solutionsMatrixTitle">تطبيق الحلول على مستوى الفرد والمجتمع والدولة</h2>
+            </div>
+            <table class="report-table">
+                <thead>
+                    <tr>
+                        <th>المستوى</th>
+                        <th>إجراء قابل للتنفيذ</th>
+                        <th>القيمة التي يدعمها</th>
+                        <th>الأثر المتوقع</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>الفرد</td>
+                        <td>التحقق من المعلومات، دعم المبادرات الإنسانية، وتبني خطاب حقوقي مسؤول.</td>
+                        <td>المسؤولية العالمية</td>
+                        <td>رفع الوعي وتقليل التضليل وتعزيز الحس الإنساني.</td>
+                    </tr>
+                    <tr>
+                        <td>المجتمع</td>
+                        <td>إطلاق برامج توعية وحوارات جامعية ومبادرات تضامن مبنية على المعرفة.</td>
+                        <td>التضامن المدني</td>
+                        <td>توسيع دائرة الفهم والمشاركة المدنية الواعية.</td>
+                    </tr>
+                    <tr>
+                        <td>الدول</td>
+                        <td>الضغط لاحترام القانون الدولي، حماية المدنيين، ودعم مسارات الحل العادل.</td>
+                        <td>العدالة الدولية</td>
+                        <td>تقوية الإطار القانوني والسياسي لمعالجة جذور الأزمة.</td>
+                    </tr>
+                    <tr>
+                        <td>المؤسسات الدولية</td>
+                        <td>تعزيز آليات المساءلة، وتوسيع الحماية الإنسانية، ومتابعة التنفيذ لا الاكتفاء بالإدانة.</td>
+                        <td>المحاسبة والإنفاذ</td>
+                        <td>تقليص الفجوة بين النصوص القانونية والواقع الميداني.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </div>
+</section>
+
+<section class="experience-hub" aria-label="مختبر القراءة والتخصيص">
+    <div class="experience-grid">
+        <article class="experience-card experience-card-controls">
+            <div class="experience-card-head">
+                <span class="experience-kicker">التخصيص</span>
+                <h2>مختبر القراءة</h2>
+                <p>اضبط شكل القراءة، عرض النص، إيقاعه، وتفاصيل الواجهة حتى تناسب طريقتك في التصفح والدراسة.</p>
+            </div>
+            <div class="control-stack">
+                <div class="control-group">
+                    <span>حجم الخط</span>
+                    <div class="control-actions">
+                        <button class="control-btn" type="button" id="fontDecreaseBtn">أصغر</button>
+                        <button class="control-btn" type="button" id="fontResetBtn">افتراضي</button>
+                        <button class="control-btn" type="button" id="fontIncreaseBtn">أكبر</button>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <span>إيقاع القراءة</span>
+                    <div class="control-actions">
+                        <button class="control-btn" type="button" id="lineHeightCompactBtn">مكثف</button>
+                        <button class="control-btn is-active" type="button" id="lineHeightNormalBtn">متوازن</button>
+                        <button class="control-btn" type="button" id="lineHeightAiryBtn">مريح</button>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <span>نمط الحروف</span>
+                    <div class="control-actions">
+                        <button class="control-btn is-active" type="button" id="fontClassicBtn">كلاسيكي</button>
+                        <button class="control-btn" type="button" id="fontEditorialBtn">تحريري</button>
+                        <button class="control-btn" type="button" id="fontModernBtn">حديث</button>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <span>عرض الصفحة</span>
+                    <div class="control-actions">
+                        <button class="control-btn is-active" type="button" id="widthStandardBtn">قياسي</button>
+                        <button class="control-btn" type="button" id="widthNarrowBtn">مركز</button>
+                        <button class="control-btn" type="button" id="widthWideBtn">واسع</button>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <span>أنماط جاهزة</span>
+                    <div class="control-actions">
+                        <button class="control-btn" type="button" id="presetResearchBtn">بحثية</button>
+                        <button class="control-btn" type="button" id="presetFocusBtn">تركيز</button>
+                        <button class="control-btn" type="button" id="presetPresentationBtn">عرض</button>
+                    </div>
+                </div>
+                <div class="toggle-grid">
+                    <button class="toggle-chip" type="button" id="highContrastToggle" aria-pressed="false">تباين عالٍ</button>
+                    <button class="toggle-chip" type="button" id="sepiaToggle" aria-pressed="false">وضع ورقي</button>
+                    <button class="toggle-chip" type="button" id="imagesToggle" aria-pressed="false">إخفاء الصور</button>
+                    <button class="toggle-chip" type="button" id="referencesToggle" aria-pressed="false">إخفاء المراجع</button>
+                    <button class="toggle-chip" type="button" id="focusModeToggle" aria-pressed="false">وضع التركيز</button>
+                </div>
+            </div>
+        </article>
+
+        <article class="experience-card experience-card-status">
+            <div class="experience-card-head">
+                <span class="experience-kicker">المتابعة</span>
+                <h2>لوحة التقدّم</h2>
+                <p>مؤشرات حية للجلسة الحالية، زياراتك السابقة، المحاور المقروءة، والأقسام التي حفظتها للعودة إليها لاحقًا.</p>
+            </div>
+            <div class="status-grid">
+                <div class="status-item">
+                    <span>زمن الجلسة</span>
+                    <strong id="sessionTimer">00:05</strong>
+                </div>
+                <div class="status-item">
+                    <span>المحاور المقروءة</span>
+                    <strong id="visitedSectionsCount">1</strong>
+                </div>
+                <div class="status-item">
+                    <span>الأقسام المحفوظة</span>
+                    <strong id="savedSectionsCount">0</strong>
+                </div>
+                <div class="status-item">
+                    <span>آخر زيارة</span>
+                    <strong id="lastVisitLabel">الآن</strong>
+                </div>
+                <div class="status-item">
+                    <span>عدد الزيارات</span>
+                    <strong id="visitCountLabel">1</strong>
+                </div>
+                <div class="status-item">
+                    <span>كلمات الملاحظات</span>
+                    <strong id="savedNotesCount">0</strong>
+                </div>
+            </div>
+            <div class="status-actions">
+                <button class="utility-btn" type="button" id="continueReadingBtn">تابع القراءة</button>
+                <button class="utility-btn" type="button" id="bookmarkCurrentBtn">احفظ هذا المحور</button>
+                <button class="utility-btn" type="button" id="copySummaryBtn">انسخ ملخص البحث</button>
+                <button class="utility-btn" type="button" id="copyPageLinkBtn">انسخ رابط الصفحة</button>
+            </div>
+            <div class="quote-spotlight">
+                <span>اقتباس محوري</span>
+                <p id="quoteSpotlight">تعتبر القضية الفلسطينية واحدة من أبرز وأطول النزاعات في العصر الحديث. تدور القضية بشكل أساسي حول حق الشعب الفلسطيني في تقرير مصيره، وعودة اللاجئين إلى ديارهم، والمطالبة بإنهاء السيطرة العسكرية الإسرائيلية على الأراضي الف...</p>
+            </div>
+            <div class="bookmark-panel">
+                <div class="bookmark-panel-head">
+                    <strong>محاور محفوظة</strong>
+                    <button class="text-btn" type="button" id="clearBookmarksBtn">مسح الكل</button>
+                </div>
+                <div class="bookmark-chip-list" id="bookmarkChipList"><span class="notes-status">لا توجد محاور محفوظة حتى الآن.</span></div>
+            </div>
+            <div class="jump-chip-list" id="quickJumpList"><button type="button" class="jump-chip" data-target="intro">تعريف القضية</button><button type="button" class="jump-chip" data-target="causes">الأسباب التاريخية</button><button type="button" class="jump-chip" data-target="impact">التداعيات الحقوقية</button><button type="button" class="jump-chip" data-target="global">التأثير العالمي</button><button type="button" class="jump-chip" data-target="persona">يحيى السنوار</button><button type="button" class="jump-chip" data-target="events">أحداث ميدانية</button><button type="button" class="jump-chip" data-target="analysis">تحليل الأثر</button><button type="button" class="jump-chip" data-target="solutions">حلول ومقترحات</button><button type="button" class="jump-chip" data-target="reflection">الخلاصة</button><button type="button" class="jump-chip" data-target="references">المصادر</button></div>
+        </article>
+
+        <article class="experience-card experience-card-notes">
+            <div class="experience-card-head">
+                <span class="experience-kicker">الملاحظات</span>
+                <h2>مساحة الدراسة</h2>
+                <p>دوّن الملاحظات، احفظها محليًا على جهازك، انسخها أو حمّلها كملف نصي أثناء قراءة البحث.</p>
+            </div>
+            <textarea id="researchNotes" class="notes-textarea" placeholder="اكتب هنا ملاحظاتك، الأفكار المهمة، أو النقاط التي تريد مراجعتها لاحقًا..."></textarea>
+            <div class="notes-actions">
+                <button class="utility-btn" type="button" id="saveNotesBtn">حفظ الملاحظات</button>
+                <button class="utility-btn" type="button" id="copyNotesBtn">نسخ الملاحظات</button>
+                <button class="utility-btn" type="button" id="downloadNotesBtn">تحميل TXT</button>
+                <button class="utility-btn" type="button" id="clearNotesBtn">مسح الملاحظات</button>
+            </div>
+            <p class="notes-status" id="notesStatus">لا توجد ملاحظات محفوظة بعد.</p>
+            <div class="shortcut-list" aria-label="اختصارات لوحة المفاتيح">
+                <div><strong>/</strong><span>تركيز البحث</span></div>
+                <div><strong>T</strong><span>العودة للأعلى</span></div>
+                <div><strong>N</strong><span>القفز للملاحظات</span></div>
+                <div><strong>B</strong><span>حفظ المحور الحالي</span></div>
+                <div><strong>K</strong><span>مركز الأوامر</span></div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="insight-layers" aria-label="طبقات تحليلية إضافية">
+    <div class="insight-shell">
+        <div class="insight-intro reveal">
+            <span class="insight-kicker">الطبقة الثانية</span>
+            <h2>واجهة أغنى للفهم السريع والتنقل الذكي داخل البحث</h2>
+            <p>هذه المساحة تضيف للمقال خطًا زمنيًا، عدسات قراءة، معجمًا للمفاهيم، أسئلة متكررة، ولوحة تحرك سريعة حتى تتحول الصفحة من مقال جميل إلى تجربة بحثية أكثر عمقًا ومرونة.</p>
+        </div>
+        <div class="insight-grid">
+            <article class="insight-card reveal" aria-labelledby="timelineTitle">
+                <div class="insight-card-head">
+                    <span class="insight-kicker">المسار الزمني</span>
+                    <h2 id="timelineTitle">محطات مفصلية في القضية الفلسطينية</h2>
+                    <p>تنقّل بين المنعطفات الكبرى ثم اقفز فورًا إلى المحور الأقرب لها داخل البحث الحالي.</p>
+                </div>
+                <div class="timeline-rail" id="timelineRail">
+                    <button class="timeline-stop" type="button" data-target="causes">
+                        <strong>1917</strong>
+                        <span class="timeline-stop-copy"><span>وعد بلفور</span><small>بداية مفصلية في إعادة تشكيل المسألة الفلسطينية تحت المظلة الاستعمارية.</small></span>
+                    </button>
+                    <button class="timeline-stop" type="button" data-target="impact">
+                        <strong>1948</strong>
+                        <span class="timeline-stop-copy"><span>النكبة</span><small>اقتلاع واسع وتحوّل القضية إلى قضية شعب ولاجئين وذاكرة وحق عودة.</small></span>
+                    </button>
+                    <button class="timeline-stop" type="button" data-target="global">
+                        <strong>1967</strong>
+                        <span class="timeline-stop-copy"><span>توسّع الاحتلال</span><small>الضفة وغزة والقدس الشرقية تدخل طورًا جديدًا من الهيمنة العسكرية والسياسية.</small></span>
+                    </button>
+                    <button class="timeline-stop" type="button" data-target="persona">
+                        <strong>1987</strong>
+                        <span class="timeline-stop-copy"><span>الانتفاضة الأولى</span><small>صعود الفاعلين المحليين وبروز أطر سياسية جديدة داخل المجتمع الفلسطيني.</small></span>
+                    </button>
+                    <button class="timeline-stop" type="button" data-target="events">
+                        <strong>2007</strong>
+                        <span class="timeline-stop-copy"><span>حصار غزة</span><small>تكثيف الضغوط الإنسانية والاقتصادية وتحول القطاع إلى بؤرة اختبار دائمة.</small></span>
+                    </button>
+                    <button class="timeline-stop" type="button" data-target="events">
+                        <strong>2018</strong>
+                        <span class="timeline-stop-copy"><span>مسيرات العودة</span><small>عودة الشارع والرمزية الجماعية إلى واجهة المشهد الحقوقي والإعلامي.</small></span>
+                    </button>
+                    <button class="timeline-stop" type="button" data-target="analysis">
+                        <strong>2023</strong>
+                        <span class="timeline-stop-copy"><span>تحول عالمي جديد</span><small>توسّع الحضور الدولي للقضية وتكثف الجدل حول القانون الدولي والسرديات المتصارعة.</small></span>
+                    </button>
+                    <button class="timeline-stop" type="button" data-target="solutions">
+                        <strong>الآفاق</strong>
+                        <span class="timeline-stop-copy"><span>المرحلة القادمة</span><small>الانتقال من توصيف المأزق إلى مناقشة الحلول والمداخل العملية الممكنة.</small></span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="insight-card reveal" aria-labelledby="lensTitle">
+                <div class="insight-card-head">
+                    <span class="insight-kicker">عدسات القراءة</span>
+                    <h2 id="lensTitle">ادخل إلى البحث من الزاوية التي تريدها</h2>
+                    <p>اختر عدسة موضوعية وسنركّز البحث والفهرس حول الكلمات الأقرب لهذا المسار.</p>
+                </div>
+                <div class="lens-grid">
+                    <button class="lens-chip" type="button" data-keyword="حق العودة">
+                        <strong>حق العودة</strong>
+                        <span>يتتبع البعد التاريخي والذاكرة واللاجئين والعدالة الممتدة.</span>
+                    </button>
+                    <button class="lens-chip" type="button" data-keyword="القانون الدولي">
+                        <strong>القانون الدولي</strong>
+                        <span>يركز على المحاكم والقرارات والشرعية الدولية وحدود فعاليتها.</span>
+                    </button>
+                    <button class="lens-chip" type="button" data-keyword="غزة">
+                        <strong>غزة</strong>
+                        <span>يقودك إلى الحصار والحدث الميداني والضغط الإنساني والإعلامي.</span>
+                    </button>
+                    <button class="lens-chip" type="button" data-keyword="السنوار">
+                        <strong>السنوار</strong>
+                        <span>يفتح خط الشخصية السياسية داخل بنية الصراع لا خارجه.</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="insight-card reveal" aria-labelledby="glossaryTitle">
+                <div class="insight-card-head">
+                    <span class="insight-kicker">معجم المفاهيم</span>
+                    <h2 id="glossaryTitle">مصطلحات أساسية لفهم النص بسرعة أكبر</h2>
+                    <p>ابحث داخل المفاهيم، افتح تعريفها، ثم تتبع حضورها داخل المقال بضغطة واحدة.</p>
+                </div>
+                <div class="glossary-search-shell">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <input type="search" id="glossarySearch" placeholder="ابحث عن مفهوم مثل: النكبة، الحصار، تقرير المصير">
+                </div>
+                <p class="glossary-meta" id="glossaryMeta">يعرض هذا القسم المفاهيم المركزية التي يتكرر حضورها في البحث الحالي.</p>
+                <div class="glossary-list" id="glossaryList">
+                    <details class="glossary-item" data-term="النكبة" open="">
+                        <summary><span>النكبة</span><small>اقتلاع 1948 وتحول الفلسطيني إلى لاجئ داخل سردية مستمرة.</small></summary>
+                        <p>تشير النكبة إلى التهجير الجماعي وتدمير البنية الاجتماعية والمكانية للفلسطينيين سنة 1948، وهي ليست حدثًا منتهيًا بقدر ما تعد إطارًا تفسيريًا مستمرًا للهوية والذاكرة والحق.</p>
+                        <button class="glossary-link" type="button" data-keyword="النكبة">تتبع المصطلح داخل البحث</button>
+                    </details>
+                    <details class="glossary-item" data-term="حق العودة">
+                        <summary><span>حق العودة</span><small>حق قانوني وأخلاقي يرتبط باللاجئين وبيوتهم الأصلية.</small></summary>
+                        <p>يرتبط حق العودة بإمكانية رجوع اللاجئين الفلسطينيين إلى ديارهم وتعويضهم، ويشكّل أحد أكثر محاور القضية حساسية لما يحمله من بعد قانوني وإنساني ووجودي.</p>
+                        <button class="glossary-link" type="button" data-keyword="حق العودة">تتبع المصطلح داخل البحث</button>
+                    </details>
+                    <details class="glossary-item" data-term="الحصار">
+                        <summary><span>الحصار</span><small>أداة ضغط مركبة تمس الحياة اليومية والاقتصاد والتنقل.</small></summary>
+                        <p>في السياق الفلسطيني، يُقرأ الحصار بوصفه سياسة تتجاوز المعنى الأمني الضيق لتطال الحق في العلاج والتعليم والعمل وتدفق السلع والقدرة على إعادة البناء.</p>
+                        <button class="glossary-link" type="button" data-keyword="الحصار">تتبع المصطلح داخل البحث</button>
+                    </details>
+                    <details class="glossary-item" data-term="تقرير المصير">
+                        <summary><span>تقرير المصير</span><small>القاعدة التي تمنح الشعوب حق تحديد مستقبلها السياسي.</small></summary>
+                        <p>يظهر هذا المفهوم في قلب الشرعية الدولية الحديثة، ويمنح الشعب الفلسطيني سندًا قانونيًا في المطالبة بالدولة والتمثيل والاستقلال وإنهاء السيطرة الخارجية.</p>
+                        <button class="glossary-link" type="button" data-keyword="تقرير المصير">تتبع المصطلح داخل البحث</button>
+                    </details>
+                    <details class="glossary-item" data-term="القانون الدولي الإنساني">
+                        <summary><span>القانون الدولي الإنساني</span><small>الإطار الناظم لحماية المدنيين أثناء النزاعات المسلحة.</small></summary>
+                        <p>يحدد هذا القانون قواعد الاشتباك وحدود استخدام القوة وحماية المدنيين والمنشآت المدنية، ولذلك يتكرر حضوره في أي نقاش جاد عن فلسطين والحروب على غزة.</p>
+                        <button class="glossary-link" type="button" data-keyword="القانون الدولي">تتبع المصطلح داخل البحث</button>
+                    </details>
+                    <details class="glossary-item" data-term="اللاجئون">
+                        <summary><span>اللاجئون</span><small>بُعد إنساني وسياسي مركزي لا يمكن فصل القضية عنه.</small></summary>
+                        <p>لا يقتصر معنى اللاجئ هنا على الوضع الإنساني، بل يمتد إلى المكان المفقود والهوية القانونية والتمثيل السياسي واستمرار المطالبة بالعودة والاعتراف.</p>
+                        <button class="glossary-link" type="button" data-keyword="اللاجئين">تتبع المصطلح داخل البحث</button>
+                    </details>
+                </div>
+            </article>
+
+            <article class="insight-card reveal" aria-labelledby="faqTitle">
+                <div class="insight-card-head">
+                    <span class="insight-kicker">أسئلة متكررة</span>
+                    <h2 id="faqTitle">أسئلة تساعد القارئ على إعادة تنظيم الفكرة</h2>
+                    <p>إجابات قصيرة تمهّد للدخول إلى النص الأكاديمي أو مراجعة أهم نقاطه بعد القراءة.</p>
+                </div>
+                <div class="glossary-list">
+                    <details class="faq-item" open="">
+                        <summary><span>لماذا تبقى القضية الفلسطينية حاضرة عالميًا؟</span><small>لأنها تمس القانون الدولي والعدالة والسرديات السياسية معًا.</small></summary>
+                        <p>تجمع القضية بين الاحتلال والتهجير واللاجئين والبعد الديني والرمزي، كما أنها تختبر مدى صدقية النظام الدولي في تطبيق قواعده على الجميع دون استثناء.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary><span>ما الذي يجعل غزة مركزية في هذا الملف؟</span><small>الحصار والضغط الإنساني والرمزية السياسية.</small></summary>
+                        <p>تمثل غزة نقطة التقاء بين الإنساني والميداني والإعلامي؛ فهي مساحة مكثفة يظهر فيها أثر السياسات والحروب والحصار على السكان بصورة مباشرة وواضحة.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary><span>كيف يُفهم حضور يحيى السنوار في هذا البحث؟</span><small>كشخصية ناتجة عن السياق لا منفصلة عنه.</small></summary>
+                        <p>يعرض المقال السنوار بوصفه امتدادًا لمسار سياسي وميداني تشكّل داخل شروط الصراع الطويل، لا كاستثناء شخصي منفصل عن البنية العامة للقضية.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary><span>ما فائدة هذا الفهرس المتطور والعدسات الجديدة؟</span><small>تسريع الفهم وتمكين القارئ من بناء مسار قراءته الخاص.</small></summary>
+                        <p>بدل قراءة المقال سطرًا بسطر فقط، يمكن الآن الدخول من بوابة المفاهيم أو الزمن أو العدسة الموضوعية أو الأوامر السريعة، وهذا يرفع من جودة التصفح والمراجعة.</p>
+                    </details>
+                </div>
+            </article>
+
+            <article class="insight-card reveal" aria-labelledby="actionTitle">
+                <div class="insight-card-head">
+                    <span class="insight-kicker">لوحة الحركة</span>
+                    <h2 id="actionTitle">أوامر سريعة للدراسة والتنقل</h2>
+                    <p>مجموعة أزرار تخدم المراجعة السريعة، التحضير للعرض، والعودة الفورية إلى النقاط المهمة.</p>
+                </div>
+                <div class="action-grid">
+                    <button class="insight-action-btn" type="button" id="copyOutlineBtn">
+                        <strong>نسخ مخطط البحث</strong>
+                        <span>قائمة جاهزة بمحاور المقال ومقدماته الفرعية.</span>
+                    </button>
+                    <button class="insight-action-btn" type="button" id="randomSectionBtn">
+                        <strong>محور عشوائي</strong>
+                        <span>للمراجعة السريعة أو إعادة اكتشاف جزء لم تقرأه بعناية.</span>
+                    </button>
+                    <button class="insight-action-btn" type="button" id="focusUnreadBtn">
+                        <strong>أول محور غير مقروء</strong>
+                        <span>يقودك مباشرة إلى أول جزء لم يمر ضمن تتبع الجلسة الحالية.</span>
+                    </button>
+                    <button class="insight-action-btn" type="button" id="openPaletteBtn">
+                        <strong>فتح مركز الأوامر</strong>
+                        <span>لوحة موحدة للمحاور والمفاهيم والعناصر المحفوظة.</span>
+                    </button>
+                </div>
+                <div class="insight-mini-grid" aria-label="مزايا إضافية">
+                    <div>
+                        <strong>Ctrl + K</strong>
+                        <span>اختصار سريع يفتح لك مركز الأوامر من أي مكان في الصفحة.</span>
+                    </div>
+                    <div>
+                        <strong>فهرس مفلتر</strong>
+                        <span>قسّم المحاور إلى مسارات تاريخية وحقوقية ودولية وسياسية.</span>
+                    </div>
+                    <div>
+                        <strong>معجم حي</strong>
+                        <span>ابحث داخل المفاهيم ثم عد إلى النص بذات المصطلح خلال ثوانٍ.</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- المحتوى الرئيسي مع السايدبار -->
+<div class="main-wrapper">
+    
+    <!-- السايدبار (الفهرس) -->
+    <aside class="sidebar toc-collapsed" aria-label="أدوات القراءة والفهرس">
+        <div class="sidebar-panel">
+            <span class="sidebar-kicker">خريطة القراءة</span>
+            <h3><i class="fas fa-bookmark"></i> فهرس المحتويات</h3>
+            <p class="sidebar-summary">واجهة تنقل سريعة تقودك من المدخل إلى المراجع، مع مؤشر حي يوضح موقعك الحالي داخل البحث.</p>
+            <div class="reading-progress-card" aria-live="polite">
+                <div class="reading-progress-head">
+                    <span>أنت الآن في</span>
+                    <strong id="currentSectionLabel">تعريف القضية</strong>
+                </div>
+                <div class="reading-track" aria-hidden="true">
+                    <span id="readingProgressBar" style="width: 10%;"></span>
+                </div>
+                <p class="reading-caption" id="readingProgressText">10% من محاور البحث</p>
+            </div>
+            <button class="toc-toggle" id="tocToggle" type="button" aria-expanded="false" aria-controls="tocPanel">
+                <span id="tocToggleText">فتح الفهرس</span>
+                <i class="fas fa-layer-group" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="sidebar-stack" id="tocPanel" aria-hidden="true">
+            <div class="sidebar-tools">
+                <label class="sidebar-label" for="articleSearch">ابحث داخل البحث</label>
+                <div class="search-shell">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input type="search" id="articleSearch" class="search-input" placeholder="مثل: غزة، اللاجئين، القانون الدولي">
+                </div>
+                <p class="search-meta" id="searchResultsMeta" aria-live="polite">اكتب كلمة مفتاحية لاستعراض المحاور والمراجع المطابقة.</p>
+                <div class="keyword-chip-list" id="keywordChipList" aria-label="كلمات مفتاحية سريعة">
+                    <button class="keyword-chip" type="button" data-keyword="غزة">غزة</button>
+                    <button class="keyword-chip" type="button" data-keyword="اللاجئين">اللاجئين</button>
+                    <button class="keyword-chip" type="button" data-keyword="القانون الدولي">القانون الدولي</button>
+                    <button class="keyword-chip" type="button" data-keyword="النكبة">النكبة</button>
+                    <button class="keyword-chip" type="button" data-keyword="الحصار">الحصار</button>
+                    <button class="keyword-chip" type="button" data-keyword="السنوار">السنوار</button>
+                </div>
+                <div class="toc-filter-bar" aria-label="تصفية الفهرس">
+                    <button class="toc-filter-chip is-active" type="button" data-filter="all">الكل</button>
+                    <button class="toc-filter-chip" type="button" data-filter="history">التاريخ</button>
+                    <button class="toc-filter-chip" type="button" data-filter="humanitarian">الحقوق</button>
+                    <button class="toc-filter-chip" type="button" data-filter="international">الدولي</button>
+                    <button class="toc-filter-chip" type="button" data-filter="political">السياسي</button>
+                    <button class="toc-filter-chip" type="button" data-filter="solutions">الحلول</button>
+                </div>
+                <p class="toc-filter-status" id="tocFilterStatus">يعرض الفهرس الآن جميع المحاور.</p>
+            </div>
+
+            <div class="sidebar-stats" aria-label="ملخص سريع">
+                <div>
+                    <span>المراجع</span>
+                    <strong id="sidebarRefCount">15</strong>
+                </div>
+                <div>
+                    <span>الصور</span>
+                    <strong id="sidebarFigureCount">6</strong>
+                </div>
+                <div>
+                    <span>زمن القراءة</span>
+                    <strong id="sidebarReadingTime">15 د</strong>
+                </div>
+            </div>
+
+            <nav id="navbar" aria-label="التنقل بين المحاور">
+                <ul>
+                    <li><a href="#intro" class="nav-link active is-visited" data-cluster="history" aria-current="location"><span class="nav-link-copy"><span class="nav-link-text">تعريف القضية وتبريرها</span><small>المدخل والمنطلق العام</small></span></a></li>
+                    <li><a href="#causes" class="nav-link" data-cluster="history"><span class="nav-link-copy"><span class="nav-link-text">الأسباب التاريخية</span><small>الجذور السياسية والوقائع المؤسسة</small></span></a></li>
+                    <li><a href="#impact" class="nav-link" data-cluster="humanitarian"><span class="nav-link-copy"><span class="nav-link-text">التداعيات الحقوقية</span><small>الحقوق والبعد الإنساني والاجتماعي</small></span></a></li>
+                    <li><a href="#global" class="nav-link" data-cluster="international"><span class="nav-link-copy"><span class="nav-link-text">التأثير العالمي</span><small>القانون الدولي والمجال العالمي</small></span></a></li>
+                    <li><a href="#persona" class="nav-link" data-cluster="political"><span class="nav-link-copy"><span class="nav-link-text">يحيى السنوار</span><small>الشخصية في سياقها السياسي</small></span></a></li>
+                    <li><a href="#events" class="nav-link" data-cluster="political"><span class="nav-link-copy"><span class="nav-link-text">أحداث ميدانية</span><small>محطات وتحولات مفصلية</small></span></a></li>
+                    <li><a href="#analysis" class="nav-link" data-cluster="political"><span class="nav-link-copy"><span class="nav-link-text">تحليل الأثر</span><small>قراءة في المفاعيل السياسية</small></span></a></li>
+                    <li><a href="#solutions" class="nav-link" data-cluster="solutions"><span class="nav-link-copy"><span class="nav-link-text">حلول ومقترحات</span><small>مداخل عملية قابلة للتنفيذ</small></span></a></li>
+                    <li><a href="#reflection" class="nav-link" data-cluster="solutions"><span class="nav-link-copy"><span class="nav-link-text">الخلاصة</span><small>الربط النهائي بين القضية والشخصية</small></span></a></li>
+                    <li><a href="#references" class="nav-link" data-cluster="international"><span class="nav-link-copy"><span class="nav-link-text">المصادر</span><small>المراجع والروابط الأساسية</small></span></a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-quote">يمكنك الانتقال السريع بين المحاور من هنا، أو متابعة التسلسل الأكاديمي كاملًا من الجذور التاريخية حتى الخاتمة والمراجع.</div>
+        </div>
+    </aside>
+
+    <!-- منطقة المحتوى -->
+    <main class="content-area" id="main-content" tabindex="-1">
+        <section class="article-bridge reveal" aria-label="بوابة القراءة">
+            <div class="article-bridge-copy">
+                <span class="article-bridge-kicker">بوابة القراءة</span>
+                <h2>واجهة بحثية أوضح، وفهرس يقودك بين التاريخ والقانون والبعد الإنساني</h2>
+                <p>هذه النسخة المطوّرة تجعل التنقل بين المحاور أكثر سلاسة، وتضع مفاتيح المقال الرئيسية في مقدمة المشهد حتى تبقى القراءة مركزة ومريحة بصريًا.</p>
+            </div>
+            <div class="article-bridge-grid">
+                <div>
+                    <strong>المسار</strong>
+                    <span>من التعريف والجذور إلى التحليل ثم المقترحات الختامية.</span>
+                </div>
+                <div>
+                    <strong>التركيز</strong>
+                    <span>قراءة سياسية وحقوقية وإنسانية مدعومة بصور ومراجع مباشرة.</span>
+                </div>
+                <div>
+                    <strong>التنقل</strong>
+                    <span>ابحث داخل النص أو استخدم الفهرس للوصول لأي محور خلال ثوانٍ.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="analysis-suite reveal" aria-label="منصة التحليل والتوسع">
+            <div class="analysis-suite-head">
+                <span class="analysis-kicker">منصة التوسع</span>
+                <h2>طبقة بحثية أكبر تجمع القراءة والمسارات والأدلة في مكان واحد</h2>
+                <p>هنا يصبح الموقع أكثر ضخامة وفعالية: مسارات قراءة موجّهة، لوحة تركيز حيّة، بطاقات موجز سريعة، خريطة أدلة للمراجع، وأدوات جاهزة للعرض أو المراجعة السريعة.</p>
+            </div>
+
+            <div class="analysis-grid">
+                <article class="analysis-card">
+                    <div class="analysis-card-head">
+                        <span class="analysis-kicker">المسارات الموجهة</span>
+                        <h3>اختر طريقة الدخول إلى البحث</h3>
+                        <p>كل مسار يعيد ترتيب القراءة عمليًا وفق زاوية محددة بدل التصفح الخطي فقط.</p>
+                    </div>
+                    <div class="route-map">
+                        <div class="route-actions">
+                            <button class="route-btn is-active" type="button" data-route="all">المسار الكامل</button>
+                            <button class="route-btn" type="button" data-route="history">التاريخي</button>
+                            <button class="route-btn" type="button" data-route="rights">الحقوقي</button>
+                            <button class="route-btn" type="button" data-route="political">السياسي</button>
+                            <button class="route-btn" type="button" data-route="synthesis">الخلاصة والعرض</button>
+                        </div>
+                        <p class="route-meta" id="routeMeta">يعرض جميع المحاور وفق التسلسل الأكاديمي الكامل.</p>
+                        <div class="route-trail" id="routeTrail"><button type="button" class="route-trail-btn" data-target="intro">تعريف القضية</button><button type="button" class="route-trail-btn" data-target="causes">الأسباب التاريخية</button><button type="button" class="route-trail-btn" data-target="impact">التداعيات الحقوقية</button><button type="button" class="route-trail-btn" data-target="global">التأثير العالمي</button><button type="button" class="route-trail-btn" data-target="persona">يحيى السنوار</button><button type="button" class="route-trail-btn" data-target="events">أحداث ميدانية</button><button type="button" class="route-trail-btn" data-target="analysis">تحليل الأثر</button><button type="button" class="route-trail-btn" data-target="solutions">حلول ومقترحات</button><button type="button" class="route-trail-btn" data-target="reflection">الخلاصة</button><button type="button" class="route-trail-btn" data-target="references">المصادر</button></div>
+                    </div>
+                </article>
+
+                <article class="analysis-card">
+                    <div class="analysis-card-head">
+                        <span class="analysis-kicker">التركيز الحالي</span>
+                        <h3>لوحة المحور الجاري</h3>
+                        <p>ملخص مباشر للمحور الذي تقرأه الآن مع انتقال سريع إلى السابق واللاحق.</p>
+                    </div>
+                    <div class="focus-panel">
+                        <div class="focus-highlight">
+                            <strong id="currentFocusTitle">تعريف القضية</strong>
+                            <p class="focus-snippet" id="currentFocusSnippet">تعتبر القضية الفلسطينية واحدة من أبرز وأطول النزاعات في العصر الحديث. تدور القضية بشكل أساسي حول حق الشعب الفلسطيني في تقرير مصيره، وعودة اللاجئين إلى ديارهم، والمطالبة بإنهاء السيطرة العسكرية الإسرائيلية على الأراضي الفلسطينية. ومن خلال قر...</p>
+                        </div>
+                        <div class="focus-meta">
+                            <span id="currentFocusMeta">المحور 1 من 10</span>
+                            <span id="currentFocusTrack">المسار التاريخي</span>
+                        </div>
+                        <div class="focus-actions">
+                            <button class="focus-nav-btn" type="button" id="prevSectionBtn" disabled="" data-target="">المحور السابق</button>
+                            <button class="focus-nav-btn" type="button" id="nextSectionBtn" data-target="causes">المحور التالي</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="analysis-card analysis-card-wide">
+                    <div class="analysis-card-head">
+                        <span class="analysis-kicker">بطاقات الموجز</span>
+                        <h3>موجز سريع لكل محور</h3>
+                        <p>واجهة مختصرة تسمح لك بمراجعة المقال كاملًا على شكل بطاقات انتقالية جاهزة.</p>
+                    </div>
+                    <div class="briefing-deck" id="briefingDeck"><article class="briefing-card"><strong>تعريف القضية</strong><span>تعتبر القضية الفلسطينية واحدة من أبرز وأطول النزاعات في العصر الحديث. تدور القضية بشكل أساسي حول حق الشعب الفلسطيني في تقرير مصيره، وعو...</span><small>المحور 1 • 1 د • المسار التاريخي</small><button type="button" data-target="intro">فتح المحور</button></article><article class="briefing-card"><strong>الأسباب التاريخية</strong><span>يمكن تلخيص الأسباب التي أدت إلى ظهور هذه القضية واستمرارها في عدة نقاط رئيسية:</span><small>المحور 2 • 1 د • المسار التاريخي</small><button type="button" data-target="causes">فتح المحور</button></article><article class="briefing-card"><strong>التداعيات الحقوقية</strong><span>أشارت تقارير حديثة لمنظمات حقوقية معروفة، مثل هيومن رايتس ووتش ومنظمة العفو الدولية، إلى أن السياسات المتبعة ضد الفلسطينيين تتضمن ممارس...</span><small>المحور 3 • 1 د • المسار الحقوقي والإنساني</small><button type="button" data-target="impact">فتح المحور</button></article><article class="briefing-card"><strong>التأثير العالمي</strong><span>لم تعد القضية محصورة في الجانب الإقليمي، بل امتد تأثيرها ليشمل:</span><small>المحور 4 • 1 د • المسار الدولي</small><button type="button" data-target="global">فتح المحور</button></article><article class="briefing-card"><strong>يحيى السنوار</strong><span>يحيى السنوار (1962 - 2024) كان شخصية سياسية وعسكرية بارزة في الساحة الفلسطينية، وشغل منصب رئيس المكتب السياسي لحركة حماس. ولد السنوار ف...</span><small>المحور 5 • 1 د • المسار السياسي</small><button type="button" data-target="persona">فتح المحور</button></article><article class="briefing-card"><strong>أحداث ميدانية</strong><span>في عام 2018، دعمت القيادة في غزة مسيرات شعبية واسعة نحو الحدود للمطالبة بفك الحصار. ورغم التكلفة البشرية العالية، يمكن تفسير هذا التحرك...</span><small>المحور 6 • 1 د • المسار السياسي</small><button type="button" data-target="events">فتح المحور</button></article><article class="briefing-card"><strong>تحليل الأثر</strong><span>تحليل أثر الشخصية في تطورات القضية
+المحور 7
+1 د قراءة
+نسخ الرابط
+حفظ
+طي
+استماع
+إعادة الاهتمام الدولي: من خلال التصعيد العسكري والسياسي،...</span><small>المحور 7 • 1 د • المسار السياسي</small><button type="button" data-target="analysis">فتح المحور</button></article><article class="briefing-card"><strong>حلول ومقترحات</strong><span>الجزء الثالث: حلول ومقترحات قابلة للتنفيذ
+المحور 8
+1 د قراءة
+نسخ الرابط
+حفظ
+طي
+استماع
+1. على مستوى المنظمات والدول:
+ضرورة التزام الدول...</span><small>المحور 8 • 1 د • مسار الحلول والخلاصة</small><button type="button" data-target="solutions">فتح المحور</button></article><article class="briefing-card"><strong>الخلاصة</strong><span>من خلال إعدادي لهذا التقرير، تعلمت أن الأزمات العالمية الممتدة لا يمكن فهمها بمعزل عن الظروف الإنسانية التي خلقتها. الربط بين القضية ال...</span><small>المحور 9 • 1 د • مسار الحلول والخلاصة</small><button type="button" data-target="reflection">فتح المحور</button></article><article class="briefing-card"><strong>المصادر</strong><span>أعيد تنظيم هذا القسم ليضم مصادر حقيقية وموثقة، موزعة بين مراجع أممية وقانونية وحقوقية وأكاديمية واقتصادية، بحيث تدعم متن البحث بدل أن ت...</span><small>المحور 10 • 4 د • المسار الدولي</small><button type="button" data-target="references">فتح المحور</button></article></div>
+                </article>
+
+                <article class="analysis-card">
+                    <div class="analysis-card-head">
+                        <span class="analysis-kicker">خريطة الأدلة</span>
+                        <h3>ما نوع المصادر التي يستند إليها البحث؟</h3>
+                        <p>ملخص حي لأنواع الأدلة الموجودة داخل المكتبة المرجعية، مع أحدث المصادر المعروضة.</p>
+                    </div>
+                    <div class="evidence-grid">
+                        <div class="evidence-item">
+                            <strong id="evidenceLawCount">2</strong>
+                            <span>قانونية وأممية</span>
+                            <small>محاكم دولية، قرارات، ومؤسسات أممية.</small>
+                        </div>
+                        <div class="evidence-item">
+                            <strong id="evidenceRightsCount">5</strong>
+                            <span>حقوقية وإنسانية</span>
+                            <small>تقارير توثيقية وبيانات ميدانية.</small>
+                        </div>
+                        <div class="evidence-item">
+                            <strong id="evidenceHistoryCount">3</strong>
+                            <span>تاريخية وأكاديمية</span>
+                            <small>جذور القضية وسياقها الممتد.</small>
+                        </div>
+                        <div class="evidence-item">
+                            <strong id="evidencePoliticalCount">3</strong>
+                            <span>سياقية وسياسية</span>
+                            <small>قراءات للشخصيات والتحولات والصراع.</small>
+                        </div>
+                        <div class="evidence-item">
+                            <strong id="evidenceEconomyCount">2</strong>
+                            <span>اقتصادية وتنموية</span>
+                            <small>الحصار، العمل، وسبل العيش.</small>
+                        </div>
+                        <div class="evidence-item">
+                            <strong id="evidenceNewestCount">7</strong>
+                            <span>مصادر حديثة</span>
+                            <small>عدد المراجع الصادرة منذ 2024.</small>
+                        </div>
+                    </div>
+                    <div class="evidence-source-list" id="evidenceSourceList"><div class="evidence-source-row"><strong>Yahya Sinwar.</strong><span>2026 • السياقي</span></div><div class="evidence-source-row"><strong>Application of the Convention on the Prevention and Punishment of the Crime of Genocide in the Gaza Strip (South Africa v. Israel).</strong><span>2024 • القانوني</span></div><div class="evidence-source-row"><strong>Containing the Gaza Conflagration.</strong><span>2024 • السياقي</span></div><div class="evidence-source-row"><strong>About UNRWA: Fact Sheet.</strong><span>2024 • الإنساني</span></div></div>
+                </article>
+
+                <article class="analysis-card">
+                    <div class="analysis-card-head">
+                        <span class="analysis-kicker">أدوات العرض</span>
+                        <h3>جاهز للمراجعة أو العرض الشفهي</h3>
+                        <p>انسخ مخططًا زمنيًا أو نقاط عرض أو خريطة أدلة مباشرة من داخل الصفحة.</p>
+                    </div>
+                    <div class="presentation-tools">
+                        <button class="presentation-tool-btn" type="button" id="copySpeakingPointsBtn">نسخ نقاط عرض</button>
+                        <button class="presentation-tool-btn" type="button" id="copyTimelineOutlineBtn">نسخ الخط الزمني</button>
+                        <button class="presentation-tool-btn" type="button" id="copyEvidenceMapBtn">نسخ خريطة الأدلة</button>
+                        <button class="presentation-tool-btn" type="button" id="copyCurrentSectionSnippetBtn">نسخ موجز المحور الحالي</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <!-- ===== جميع الأقسام النصية (كما في الكود السابق) مع إضافة خاصية رفع الصور ===== -->
+        <section id="intro" class="content-section reveal is-visited" data-kicker="المدخل" data-nav-title="تعريف القضية">
+            <h1>الجزء الأول: اختيار القضية وتبريرها</h1><div class="section-tools"><div class="section-tools-meta"><span>المحور 1</span><strong>1 د قراءة</strong></div><div class="section-tools-actions"><button class="section-tool-btn" type="button" data-action="link" data-section="intro">نسخ الرابط</button><button class="section-tool-btn" type="button" data-action="bookmark" data-section="intro">حفظ</button><button class="section-tool-btn" type="button" data-action="collapse" data-section="intro">طي</button><button class="section-tool-btn" type="button" data-action="speak" data-section="intro">استماع</button></div></div>
+            <h2>تعريف القضية الفلسطينية</h2>
+            <p>تعتبر القضية الفلسطينية واحدة من أبرز وأطول النزاعات في العصر الحديث. تدور القضية بشكل أساسي حول حق الشعب الفلسطيني في تقرير مصيره، وعودة اللاجئين إلى ديارهم، والمطالبة بإنهاء السيطرة العسكرية الإسرائيلية على الأراضي الفلسطينية. ومن خلال قراءتي لهذه القضية، يتضح أنها ليست مجرد نزاع على حدود جغرافية، بل هي قضية حقوق إنسان وقانون دولي بالدرجة الأولى <a href="#ref8" class="citation-link">(Pappé, 2006)</a>.</p>
+            
+            <!-- إطار الصورة القابل للرفع -->
+            <div class="figure-container" onclick="document.getElementById('img-upload-1').click()" role="button" tabindex="0" aria-label="فتح الصورة التوضيحية رقم 1">
+                <div class="figure-placeholder" id="ph-1" style="background: transparent; padding: 0px;"><img src="map.png" alt="خريطة تاريخية لفلسطين" loading="lazy" decoding="async" style="width:100%; max-height:400px; object-fit:contain; border-radius:8px; display:block; margin:0 auto;"></div>
+                <div class="figure-caption">الشكل (1): خريطة تاريخية توضح التحولات الجغرافية في فلسطين</div>
+                <div class="figure-source">Source: Visualizing Palestine / Historical Archives</div>
+                <input type="file" id="img-upload-1" style="display:none;" accept="image/*" onchange="loadImage(event, 'ph-1')">
+            </div>
+
+            <h2>سبب اختيار القضية</h2>
+            <p>اخترت هذه القضية تحديداً لأنها تمثل تحدياً حقيقياً لمفهوم "المواطنة العالمية" الذي ندرسه. فعندما نرى استمرار هذه الأزمة لعقود، ندرك وجود تباين في تطبيق مبادئ العدالة الدولية وحقوق الإنسان. هذا التباين يجعل من دراسة القضية الفلسطينية أمراً مهماً لفهم كيف يتعامل المجتمع الدولي مع الأزمات الإنسانية والسياسية المعقدة.</p>
+        </section>
+
+        <section id="causes" class="content-section reveal" data-kicker="الجذور" data-nav-title="الأسباب التاريخية">
+            <h1>الأسباب التاريخية والسياسية لنشوء القضية</h1><div class="section-tools"><div class="section-tools-meta"><span>المحور 2</span><strong>1 د قراءة</strong></div><div class="section-tools-actions"><button class="section-tool-btn" type="button" data-action="link" data-section="causes">نسخ الرابط</button><button class="section-tool-btn" type="button" data-action="bookmark" data-section="causes">حفظ</button><button class="section-tool-btn" type="button" data-action="collapse" data-section="causes">طي</button><button class="section-tool-btn" type="button" data-action="speak" data-section="causes">استماع</button></div></div>
+            <p>يمكن تلخيص الأسباب التي أدت إلى ظهور هذه القضية واستمرارها في عدة نقاط رئيسية:</p>
+            <ul>
+                <li><strong>فترة الانتداب ووعد بلفور:</strong> يرى المؤرخون أن التدخلات البريطانية في بداية القرن العشرين، وخاصة وعد بلفور (1917)، ساهمت في تغيير الواقع الديموغرافي والسياسي في فلسطين بشكل يتجاهل حقوق سكانها الأصليين <a href="#ref5" class="citation-link">(Khalidi, 2020)</a>.</li>
+                <li><strong>أحداث 1948 (النكبة):</strong> نتج عن إعلان قيام دولة إسرائيل وحرب 1948 تهجير مئات الآلاف من الفلسطينيين، مما خلق أزمة لاجئين مستمرة حتى يومنا هذا، وتعد من أكبر القضايا التي تتابعها الأمم المتحدة <a href="#ref10" class="citation-link">(UNRWA, 2024)</a>.</li>
+                <li><strong>التوسع في بناء المستوطنات:</strong> الاستمرار في بناء المستوطنات في الأراضي المحتلة عام 1967 يعتبر، بحسب العديد من القرارات الأممية، عقبة رئيسية أمام أي حل سياسي.</li>
+                <li><strong>الحصار الاقتصادي:</strong> القيود المفروضة على حركة الأفراد والبضائع في قطاع غزة منذ عام 2007 أدت إلى أزمة اقتصادية وإنسانية خانقة أثرت على حياة ملايين المدنيين <a href="#ref11" class="citation-link">(World Bank, 2024)</a>.</li>
+            </ul>
+
+            <div class="figure-container" onclick="document.getElementById('img-upload-2').click()" role="button" tabindex="0" aria-label="فتح الصورة التوضيحية رقم 2">
+                <div class="figure-placeholder" id="ph-2" style="background: transparent; padding: 0px;"><img src="refugees.jpg" alt="صورة للاجئين الفلسطينيين" loading="lazy" decoding="async" style="width:100%; max-height:400px; object-fit:contain; border-radius:8px; display:block; margin:0 auto;"></div>
+                <div class="figure-caption">الشكل (2): أوضاع اللاجئين الفلسطينيين إبان النكبة</div>
+                <div class="figure-source">Source: UNRWA Archives</div>
+                <input type="file" id="img-upload-2" style="display:none;" accept="image/*" onchange="loadImage(event, 'ph-2')">
+            </div>
+        </section>
+
+        <section id="impact" class="content-section reveal" data-kicker="الحقوق" data-nav-title="التداعيات الحقوقية">
+            <h1>تداعيات القضية على حقوق الإنسان والمواطنة</h1><div class="section-tools"><div class="section-tools-meta"><span>المحور 3</span><strong>1 د قراءة</strong></div><div class="section-tools-actions"><button class="section-tool-btn" type="button" data-action="link" data-section="impact">نسخ الرابط</button><button class="section-tool-btn" type="button" data-action="bookmark" data-section="impact">حفظ</button><button class="section-tool-btn" type="button" data-action="collapse" data-section="impact">طي</button><button class="section-tool-btn" type="button" data-action="speak" data-section="impact">استماع</button></div></div>
+            <h2>1. الجانب الحقوقي:</h2>
+            <p>أشارت تقارير حديثة لمنظمات حقوقية معروفة، مثل هيومن رايتس ووتش ومنظمة العفو الدولية، إلى أن السياسات المتبعة ضد الفلسطينيين تتضمن ممارسات تمييزية واسعة النطاق. وقد وصفت بعض هذه التقارير تلك السياسات بأنها ترقى قانونياً إلى مستوى "الفصل العنصري"، وهو ما يطرح تساؤلات مهمة حول دور المجتمع الدولي في حماية حقوق الإنسان <a href="#ref1" class="citation-link">(Amnesty International, 2022)</a>.</p>
+            
+            <h2>2. الجانب الاجتماعي والاقتصادي:</h2>
+            <p>من الواضح أن القيود الأمنية والاقتصادية تعيق بشكل كبير تحقيق التنمية المستدامة في الأراضي الفلسطينية. وقد بينت تقارير البنك الدولي كيف أدت هذه الظروف إلى ارتفاع نسب البطالة والفقر، مما يصعب على الأفراد الحصول على أبسط حقوقهم في العيش الكريم وتطوير مجتمعهم.</p>
+
+            <div class="figure-container" onclick="document.getElementById('img-upload-3').click()" role="button" tabindex="0" aria-label="فتح الصورة التوضيحية رقم 3">
+                <div class="figure-placeholder" id="ph-3" style="background: transparent; padding: 0px;"><img src="economy.jpg" alt="مؤشرات اقتصادية للوضع الفلسطيني" loading="lazy" decoding="async" style="width:100%; max-height:400px; object-fit:contain; border-radius:8px; display:block; margin:0 auto;"></div>
+                <div class="figure-caption">الشكل (3): مؤشرات اقتصادية للوضع في الأراضي الفلسطينية</div>
+                <div class="figure-source">Source: World Bank Data</div>
+                <input type="file" id="img-upload-3" style="display:none;" accept="image/*" onchange="loadImage(event, 'ph-3')">
+            </div>
+        </section>
+
+        <section id="global" class="content-section reveal" data-kicker="البعد الدولي" data-nav-title="التأثير العالمي">
+            <h1>التأثير العالمي للقضية</h1><div class="section-tools"><div class="section-tools-meta"><span>المحور 4</span><strong>1 د قراءة</strong></div><div class="section-tools-actions"><button class="section-tool-btn" type="button" data-action="link" data-section="global">نسخ الرابط</button><button class="section-tool-btn" type="button" data-action="bookmark" data-section="global">حفظ</button><button class="section-tool-btn" type="button" data-action="collapse" data-section="global">طي</button><button class="section-tool-btn" type="button" data-action="speak" data-section="global">استماع</button></div></div>
+            <p>لم تعد القضية محصورة في الجانب الإقليمي، بل امتد تأثيرها ليشمل:</p>
+            <ul>
+                <li><strong>الجانب القانوني الدولي:</strong> أصبحت المؤسسات مثل محكمة العدل الدولية (ICJ) مسرحاً لمناقشة تداعيات الصراع، كما حدث في الدعوى التي رفعتها جنوب إفريقيا لطلب تدابير مؤقتة. هذا يضع المنظومة القانونية الدولية أمام اختبار حقيقي لمدى التزامها بتطبيق القانون على الجميع <a href="#ref3" class="citation-link">(ICJ, 2024)</a>.</li>
+                <li><strong>التفاعل المجتمعي العالمي:</strong> لاحظنا في السنوات الأخيرة زيادة ملحوظة في وعي المجتمعات العالمية بالقضية، وبرز ذلك من خلال الاحتجاجات في الجامعات الغربية وحركات المقاطعة السلمية.</li>
+            </ul>
+
+            <div class="figure-container" onclick="document.getElementById('img-upload-4').click()" role="button" tabindex="0" aria-label="فتح الصورة التوضيحية رقم 4">
+                <div class="figure-placeholder" id="ph-4" style="background: transparent; padding: 0px;"><img src="un.jpg" alt="جلسة في الأمم المتحدة" loading="lazy" decoding="async" style="width:100%; max-height:400px; object-fit:contain; border-radius:8px; display:block; margin:0 auto;"></div>
+                <div class="figure-caption">الشكل (4): جلسة لمجلس الأمن الدولي</div>
+                <div class="figure-source">Source: UN Photo</div>
+                <input type="file" id="img-upload-4" style="display:none;" accept="image/*" onchange="loadImage(event, 'ph-4')">
+            </div>
+        </section>
+
+        <section id="persona" class="content-section reveal" data-kicker="الشخصية" data-nav-title="يحيى السنوار">
+            <h1>الجزء الثاني: يحيى السنوار وعلاقته بمسار القضية</h1><div class="section-tools"><div class="section-tools-meta"><span>المحور 5</span><strong>1 د قراءة</strong></div><div class="section-tools-actions"><button class="section-tool-btn" type="button" data-action="link" data-section="persona">نسخ الرابط</button><button class="section-tool-btn" type="button" data-action="bookmark" data-section="persona">حفظ</button><button class="section-tool-btn" type="button" data-action="collapse" data-section="persona">طي</button><button class="section-tool-btn" type="button" data-action="speak" data-section="persona">استماع</button></div></div>
+            <h2>نبذة عن الشخصية</h2>
+            <p>يحيى السنوار (1962 - 2024) كان شخصية سياسية وعسكرية بارزة في الساحة الفلسطينية، وشغل منصب رئيس المكتب السياسي لحركة حماس. ولد السنوار في مخيم خان يونس للاجئين، وقضى أكثر من 22 عاماً في السجون الإسرائيلية قبل أن يخرج في صفقة تبادل عام 2011. دراسته الطويلة للمجتمع والسياسة الإسرائيلية خلال فترة سجنه أثرت بشكل كبير على طريقة تفكيره وإدارته للصراع لاحقاً <a href="#ref6" class="citation-link">(Britannica, 2026)</a>.</p>
+            
+            <div class="figure-container" onclick="document.getElementById('img-upload-5').click()" role="button" tabindex="0" aria-label="فتح الصورة التوضيحية رقم 5">
+                <div class="figure-placeholder" id="ph-5" style="background: transparent; padding: 0px;"><img src="sinwar.jpg" alt="صورة أرشيفية ليحيى السنوار" loading="lazy" decoding="async" style="width:100%; max-height:400px; object-fit:contain; border-radius:8px; display:block; margin:0 auto;"></div>
+                <div class="figure-caption">الشكل (5): صورة أرشيفية ليحيى السنوار</div>
+                <div class="figure-source">Source: Wikimedia Commons</div>
+                <input type="file" id="img-upload-5" style="display:none;" accept="image/*" onchange="loadImage(event, 'ph-5')">
+            </div>
+
+            <h2>طبيعة اهتمامه بالقضية</h2>
+            <p>لم يكن السنوار مجرد مراقب سياسي، بل كان نتاجاً مباشراً لبيئة اللجوء والاحتلال. يرى بعض المحللين أن نهجه اعتمد على فكرة أساسية وهي أن التفاوض السلمي وحده لم يعد قادراً على تحقيق نتائج ملموسة بعد سنوات طويلة من التعثر، وأن لفت انتباه العالم إلى معاناة الفلسطينيين يتطلب استخدام أوراق ضغط ميدانية قوية ومحاولة تغيير الواقع الميداني <a href="#ref9" class="citation-link">(Roy, 2011)</a>.</p>
+        </section>
+
+        <section id="events" class="content-section reveal" data-kicker="المحطات" data-nav-title="أحداث ميدانية">
+            <h1>مواقف وأحداث ميدانية مرتبطة بالشخصية</h1><div class="section-tools"><div class="section-tools-meta"><span>المحور 6</span><strong>1 د قراءة</strong></div><div class="section-tools-actions"><button class="section-tool-btn" type="button" data-action="link" data-section="events">نسخ الرابط</button><button class="section-tool-btn" type="button" data-action="bookmark" data-section="events">حفظ</button><button class="section-tool-btn" type="button" data-action="collapse" data-section="events">طي</button><button class="section-tool-btn" type="button" data-action="speak" data-section="events">استماع</button></div></div>
+            <h3>1. دعم الاحتجاجات الشعبية (مسيرات العودة 2018):</h3>
+            <p>في عام 2018، دعمت القيادة في غزة مسيرات شعبية واسعة نحو الحدود للمطالبة بفك الحصار. ورغم التكلفة البشرية العالية، يمكن تفسير هذا التحرك بأنه كان محاولة لإعادة القضية إلى الواجهة الإعلامية والدبلوماسية وتسليط الضوء على الأزمة الإنسانية الخانقة <a href="#ref7" class="citation-link">(UNRWA, 2019)</a>.</p>
+            
+            <div class="figure-container" onclick="document.getElementById('img-upload-6').click()" role="button" tabindex="0" aria-label="فتح الصورة التوضيحية رقم 6">
+                <div class="figure-placeholder" id="ph-6" style="background: transparent; padding: 0px;"><img src="march.jpg" alt="مشهد من المسيرات في غزة" loading="lazy" decoding="async" style="width:100%; max-height:400px; object-fit:contain; border-radius:8px; display:block; margin:0 auto;"></div>
+                <div class="figure-caption">الشكل (6): مشهد ميداني من الاحتجاجات في قطاع غزة</div>
+                <div class="figure-source">Source: Middle East Monitor</div>
+                <input type="file" id="img-upload-6" style="display:none;" accept="image/*" onchange="loadImage(event, 'ph-6')">
+            </div>
+
+            <h3>2. ربط الجبهات الجغرافية (2021):</h3>
+            <p>من أبرز التحولات التي قادها السنوار كانت محاولة دمج الساحات الفلسطينية المختلفة. ففي عام 2021، ردت الفصائل في غزة عسكرياً على التوترات التي حدثت في مدينة القدس (حي الشيخ جراح).</p>
+            
+            <h3>3. التطورات الأمنية في 7 أكتوبر (2023):</h3>
+            <p>أدت التكتيكات والهجوم المفاجئ الذي حدث في السابع من أكتوبر إلى إحداث صدمة كبيرة. ومن منظور التحليل السياسي، أدت هذه التطورات إلى تعطيل بعض مسارات التطبيع الإقليمي التي كانت تتجاوز الملف الفلسطيني <a href="#ref4" class="citation-link">(International Crisis Group, 2024)</a>.</p>
+        </section>
+
+        <section id="analysis" class="content-section reveal" data-kicker="التحليل" data-nav-title="تحليل الأثر">
+            <h1>تحليل أثر الشخصية في تطورات القضية</h1><div class="section-tools"><div class="section-tools-meta"><span>المحور 7</span><strong>1 د قراءة</strong></div><div class="section-tools-actions"><button class="section-tool-btn" type="button" data-action="link" data-section="analysis">نسخ الرابط</button><button class="section-tool-btn" type="button" data-action="bookmark" data-section="analysis">حفظ</button><button class="section-tool-btn" type="button" data-action="collapse" data-section="analysis">طي</button><button class="section-tool-btn" type="button" data-action="speak" data-section="analysis">استماع</button></div></div>
+            <ul>
+                <li><strong>إعادة الاهتمام الدولي:</strong> من خلال التصعيد العسكري والسياسي، أسهمت سياساته في دفع الدول الفاعلة إلى إعادة إدراج الملف الفلسطيني كأولوية على طاولات النقاش الدبلوماسي.</li>
+                <li><strong>تطوير القدرات التنظيمية:</strong> على الرغم من الحصار المشدد، عملت الحركة تحت قيادته على تطوير قدرات ذاتية مكنتها من الصمود والمواجهة لفترات طويلة.</li>
+                <li><strong>التأثير على التصورات السياسية:</strong> يتضح من خلال متابعة الأحداث أن نهجه وجه رسالة واضحة مفادها أن الاستمرار في سياسة احتواء النزاع بدلاً من حله سيؤدي دائماً إلى انفجارات متكررة.</li>
+            </ul>
+        </section>
+
+        <section id="solutions" class="content-section reveal" data-kicker="الحلول" data-nav-title="حلول ومقترحات">
+            <h1>الجزء الثالث: حلول ومقترحات قابلة للتنفيذ</h1><div class="section-tools"><div class="section-tools-meta"><span>المحور 8</span><strong>1 د قراءة</strong></div><div class="section-tools-actions"><button class="section-tool-btn" type="button" data-action="link" data-section="solutions">نسخ الرابط</button><button class="section-tool-btn" type="button" data-action="bookmark" data-section="solutions">حفظ</button><button class="section-tool-btn" type="button" data-action="collapse" data-section="solutions">طي</button><button class="section-tool-btn" type="button" data-action="speak" data-section="solutions">استماع</button></div></div>
+            <h2>1. على مستوى المنظمات والدول:</h2>
+            <ul>
+                <li>ضرورة التزام الدول بقرارات الشرعية الدولية واحترام توصيات محكمة العدل الدولية.</li>
+                <li>تقديم دعم مؤسسي ومستدام لوكالات الإغاثة الدولية (مثل الأونروا) لتخفيف حدة الأزمة الإنسانية.</li>
+            </ul>
+
+            <h2>2. على مستوى المؤسسات المدنية:</h2>
+            <ul>
+                <li>تشجيع الجامعات والمؤسسات على مراجعة استثماراتها والتأكد من عدم ارتباطها بشركات تتربح من استمرار الاحتلال.</li>
+            </ul>
+
+            <h2>3. دور الفرد والمواطن العالمي:</h2>
+            <ul>
+                <li>العمل على التثقيف الذاتي ومتابعة المصادر المتعددة لفهم تعقيدات الصراع، والمشاركة في الحوارات التي تعزز قيم العدالة.</li>
+            </ul>
+        </section>
+
+        <section id="reflection" class="content-section reveal" data-kicker="الخلاصة" data-nav-title="الخلاصة">
+            <h1>الخلاصة والربط بين القضية والشخصية</h1><div class="section-tools"><div class="section-tools-meta"><span>المحور 9</span><strong>1 د قراءة</strong></div><div class="section-tools-actions"><button class="section-tool-btn" type="button" data-action="link" data-section="reflection">نسخ الرابط</button><button class="section-tool-btn" type="button" data-action="bookmark" data-section="reflection">حفظ</button><button class="section-tool-btn" type="button" data-action="collapse" data-section="reflection">طي</button><button class="section-tool-btn" type="button" data-action="speak" data-section="reflection">استماع</button></div></div>
+            <p>من خلال إعدادي لهذا التقرير، تعلمت أن الأزمات العالمية الممتدة لا يمكن فهمها بمعزل عن الظروف الإنسانية التي خلقتها. الربط بين القضية الفلسطينية وشخصية يحيى السنوار يقدم مثالاً واضحاً على كيف أن استمرار الحصار وغياب الأفق السياسي يؤديان بشكل طبيعي إلى بروز شخصيات وتيارات تتبنى مسارات حادة في المواجهة.</p>
+            <p>وبرأيي، فإن الدرس الأهم الذي يمكن استخلاصه هو أن المواطنة العالمية تتطلب منا معالجة الجذور الأساسية للنزاعات (كالاحتلال وانعدام العدالة) بدلاً من محاولة التعامل فقط مع أعراضها. إن تحقيق السلام الدائم لا يمكن أن يُفرض بالقوة، بل من خلال إنفاذ القانون الدولي بمساواة تامة.</p>
+        </section>
+
+        <section id="references" class="content-section reveal" data-kicker="المراجع" data-nav-title="المصادر">
+            <h1>قائمة المصادر والمراجع</h1><div class="section-tools"><div class="section-tools-meta"><span>المحور 10</span><strong>4 د قراءة</strong></div><div class="section-tools-actions"><button class="section-tool-btn" type="button" data-action="link" data-section="references">نسخ الرابط</button><button class="section-tool-btn" type="button" data-action="bookmark" data-section="references">حفظ</button><button class="section-tool-btn" type="button" data-action="collapse" data-section="references">طي</button><button class="section-tool-btn" type="button" data-action="speak" data-section="references">استماع</button></div></div>
+            <p class="references-lead">
+                <i class="fas fa-external-link-alt"></i> أعيد تنظيم هذا القسم ليضم مصادر حقيقية وموثقة، موزعة بين مراجع أممية وقانونية وحقوقية وأكاديمية واقتصادية، بحيث تدعم متن البحث بدل أن تبقى قائمة عامة غير مترابطة.
+            </p>
+            <div class="reference-architecture" aria-label="خريطة المصادر">
+                <div class="reference-architecture-card">
+                    <strong>6</strong>
+                    <span>أممية وقانونية</span>
+                    <small>الأمم المتحدة، محكمة العدل الدولية، قرارات مجلس الأمن، والأونروا.</small>
+                </div>
+                <div class="reference-architecture-card">
+                    <strong>3</strong>
+                    <span>حقوقية وإنسانية</span>
+                    <small>تقارير موثقة حول أثر السياسات والحرب والحقوق الأساسية.</small>
+                </div>
+                <div class="reference-architecture-card">
+                    <strong>4</strong>
+                    <span>أكاديمية وسياقية</span>
+                    <small>كتب ودراسات لفهم الجذور التاريخية والسياق السياسي والشخصيات.</small>
+                </div>
+                <div class="reference-architecture-card">
+                    <strong>2</strong>
+                    <span>اقتصادية وتنموية</span>
+                    <small>قياس أثر الحرب والحصار على الاقتصاد والعمل وسبل العيش.</small>
+                </div>
+            </div>
+            <div class="references-toolbar" aria-label="أدوات المراجع">
+                <div class="ref-search-shell">
+                    <i class="fas fa-filter" aria-hidden="true"></i>
+                    <input type="search" id="referenceSearch" class="ref-search-input" placeholder="ابحث باسم الجهة أو عنوان المرجع أو نوعه">
+                </div>
+                <div class="ref-filter-row" aria-label="تصنيف المراجع">
+                    <button class="ref-filter-chip is-active" type="button" data-ref-filter="all">الكل</button>
+                    <button class="ref-filter-chip" type="button" data-ref-filter="law">قانوني</button>
+                    <button class="ref-filter-chip" type="button" data-ref-filter="rights">حقوقي</button>
+                    <button class="ref-filter-chip" type="button" data-ref-filter="history">تاريخي</button>
+                    <button class="ref-filter-chip" type="button" data-ref-filter="humanitarian">إنساني</button>
+                    <button class="ref-filter-chip" type="button" data-ref-filter="economy">اقتصادي</button>
+                    <button class="ref-filter-chip" type="button" data-ref-filter="political">سياقي</button>
+                </div>
+                <div class="ref-actions">
+                    <select id="referenceSort" class="ref-sort">
+                        <option value="default">الترتيب الأكاديمي</option>
+                        <option value="az">ترتيب أبجدي</option>
+                        <option value="year">الأحدث أولًا</option>
+                    </select>
+                    <button class="ref-utility-btn" type="button" id="copyReferencesBtn">نسخ كل المراجع</button>
+                </div>
+                <p class="ref-results-meta" id="referenceResultsMeta">يظهر الآن 15 من أصل 15 مرجع.</p>
+            </div>
+            <div class="reference-empty-state" id="referenceEmptyState" hidden="">لا توجد مراجع مطابقة للفلترة الحالية.</div>
+            
+            <div class="references-list">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            <article class="ref-item" id="ref1" data-category="rights" data-year="2022" data-copy-text="Amnesty International. (2022). Israel’s Apartheid Against Palestinians: Cruel System of Domination and Crime Against Humanity. https://www.amnesty.org/en/documents/mde15/5141/2022/en/">
+                    <div class="ref-item-head">
+                        <span class="ref-index">01</span>
+                        <div class="ref-badges">
+                            <span class="ref-badge">حقوقي</span>
+                            <span class="ref-badge">تقرير دولي</span>
+                        </div>
+                    </div>
+                    <strong>Amnesty International. (2022).</strong>
+                    <a href="https://www.amnesty.org/en/documents/mde15/5141/2022/en/" target="_blank" rel="noopener noreferrer" class="ref-link"><em>Israel’s Apartheid Against Palestinians: Cruel System of Domination and Crime Against Humanity.</em></a>
+                    <p class="ref-note">يدعم المحور الحقوقي في البحث، خاصةً ما يتعلق بالتمييز البنيوي والانتهاكات الممتدة بحق الفلسطينيين.</p>
+                <button type="button" class="ref-copy-btn">نسخ</button></article><article class="ref-item" id="ref2" data-category="rights" data-year="2021" data-copy-text="Human Rights Watch. (2021). A Threshold Crossed: Israeli Authorities and the Crimes of Apartheid and Persecution. https://www.hrw.org/report/2021/04/27/threshold-crossed/israeli-authorities-and-crimes-apartheid-and-persecution">
+                    <div class="ref-item-head">
+                        <span class="ref-index">02</span>
+                        <div class="ref-badges">
+                            <span class="ref-badge">حقوقي</span>
+                            <span class="ref-badge">توثيق قانوني</span>
+                        </div>
+                    </div>
+                    <strong>Human Rights Watch. (2021).</strong>
+                    <a href="https://www.hrw.org/report/2021/04/27/threshold-crossed/israeli-authorities-and-crimes-apartheid-and-persecution" target="_blank" rel="noopener noreferrer" class="ref-link"><em>A Threshold Crossed: Israeli Authorities and the Crimes of Apartheid and Persecution.</em></a>
+                    <p class="ref-note">مرجع مهم لفهم اللغة الحقوقية والقانونية المستخدمة عند مناقشة البنية التمييزية وآثارها على الحقوق الأساسية.</p>
+                <button type="button" class="ref-copy-btn">نسخ</button></article><article class="ref-item" id="ref3" data-category="law" data-year="2024" data-copy-text="International Court of Justice. (2024). Application of the Convention on the Prevention and Punishment of the Crime of Genocide in the Gaza Strip (South Africa v. Israel), case page and provisional measures. https://www.icj-cij.org/case/192">
+                    <div class="ref-item-head">
+                        <span class="ref-index">03</span>
+                        <div class="ref-badges">
+                            <span class="ref-badge">قانوني</span>
+                            <span class="ref-badge">محكمة دولية</span>
+                        </div>
+                    </div>
+                    <strong>International Court of Justice (ICJ). (2024).</strong>
+                    <a href="https://www.icj-cij.org/case/192" target="_blank" rel="noopener noreferrer" class="ref-link"><em>Application of the Convention on the Prevention and Punishment of the Crime of Genocide in the Gaza Strip (South Africa v. Israel).</em></a>
+                    <p class="ref-note">يرتبط مباشرة بالفقرة التي تناقش اختبار القانون الدولي عبر التدابير المؤقتة واللجوء إلى القضاء الدولي.</p>
+                <button type="button" class="ref-copy-btn">نسخ</button></article><article class="ref-item" id="ref4" data-category="political" data-year="2024" data-copy-text="International Crisis Group. (2024). Containing the Gaza Conflagration. Watch List 2024. https://www.crisisgroup.org/sites/default/files/2024-02/wl-2024-gaza.pdf">
+                    <div class="ref-item-head">
+                        <span class="ref-index">04</span>
+                        <div class="ref-badges">
+                            <span class="ref-badge">سياقي</span>
+                            <span class="ref-badge">تحليل سياسي</span>
+                        </div>
+                    </div>
+                    <strong>International Crisis Group. (2024).</strong>
+                    <a href="https://www.crisisgroup.org/sites/default/files/2024-02/wl-2024-gaza.pdf" target="_blank" rel="noopener noreferrer" class="ref-link"><em>Containing the Gaza Conflagration.</em></a>
+                    <p class="ref-note">مفيد لقراءة الارتدادات الإقليمية والسياسية للحرب وتبدل الحسابات الدولية والإقليمية بعد 7 أكتوبر.</p>
+                <button type="button" class="ref-copy-btn">نسخ</button></article><article class="ref-item" id="ref5" data-category="history" data-year="2020" data-copy-text="Khalidi, R. (2020). The Hundred Years' War on Palestine: A History of Settler Colonialism and Resistance, 1917-2017. https://us.macmillan.com/books/9781627798549/thehundredyearswaronpalestine">
+                    <div class="ref-item-head">
+                        <span class="ref-index">05</span>
+                        <div class="ref-badges">
+                            <span class="ref-badge">تاريخي</span>
+                            <span class="ref-badge">أكاديمي</span>
+                        </div>
+                    </div>
+                    <strong>Khalidi, R. (2020).</strong>
+                    <a href="https://us.macmillan.com/books/9781627798549/thehundredyearswaronpalestine" target="_blank" rel="noopener noreferrer" class="ref-link"><em>The Hundred Years' War on Palestine: A History of Settler Colonialism and Resistance, 1917-2017.</em></a>
+                    <p class="ref-note">مرجع قوي للجذور التاريخية ووعد بلفور والتحولات البنيوية التي قادت إلى تشكل القضية بصيغتها الحديثة.</p>
+                <button type="button" class="ref-copy-btn">نسخ</button></article><article class="ref-item" id="ref6" data-category="political" data-year="2026" data-copy-text="Encyclopaedia Britannica. (2026). Yahya Sinwar. https://www.britannica.com/biography/Yahya-Sunwar">
+                    <div class="ref-item-head">
+                        <span class="ref-index">06</span>
+                        <div class="ref-badges">
+                            <span class="ref-badge">سيرة</span>
+                            <span class="ref-badge">شخصية محورية</span>
+                        </div>
+                    </div>
+                    <strong>Encyclopaedia Britannica. (2026).</strong>
+                    <a href="https://www.britannica.com/biography/Yahya-Sunwar" target="_blank" rel="noopener noreferrer" class="ref-link"><em>Yahya Sinwar.</em></a>
+                    <p class="ref-note">يوفر خلفية مركزة وموثوقة عن سيرة السنوار ومساره السياسي، بما يخدم الجزء الخاص بالشخصية وسياقها.</p>
+                <button type="button" class="ref-copy-btn">نسخ</button></article><article class="ref-item" id="ref7" data-category="humanitarian" data-year="2019" data-copy-text="UNRWA. (2019). Gaza’s Great March of Return: One Year On. https://www.un.org/unispal/wp-content/uploads/2019/06/UNRWAGMoRRPT_290319.pdf">
+                    <div class="ref-item-head">
+                        <span class="ref-index">07</span>
+                        <div class="ref-badges">
+                            <span class="ref-badge">إنساني</span>
+                            <span class="ref-badge">ميداني</span>
+                        </div>
+                    </div>
+                    <strong>UNRWA. (2019).</strong>
+                    <a href="https://www.un.org/unispal/wp-content/uploads/2019/06/UNRWAGMoRRPT_290319.pdf" target="_blank" rel="noopener noreferrer" class="ref-link"><em>Gaza’s “Great March of Return”: One Year On.</em></a>
+                    <p class="ref-note">يدعم الحديث عن مسيرات العودة من زاوية الكلفة البشرية والضغط الإنساني وإعادة جذب الانتباه الدولي إلى غزة.</p>
+                <button type="button" class="ref-copy-btn">نسخ</button></article><article class="ref-item" id="ref8" data-category="history" data-year="2006" data-copy-text="Pappé, I. (2006). The Ethnic Cleansing of Palestine. https://oneworld-publications.com/work/the-ethnic-cleansing-of-palestine/">
+                    <div class="ref-item-head">
+                        <span class="ref-index">08</span>
+                        <div class="ref-badges">
+                            <span class="ref-badge">تاريخي</span>
+                            <span class="ref-badge">أكاديمي</span>
+                        </div>
+                    </div>
+                    <strong>Pappé, I. (2006).</strong>
+                    <a href="https://oneworld-publications.com/work/the-ethnic-cleansing-of-palestine/" target="_blank" rel="noopener noreferrer" class="ref-link"><em>The Ethnic Cleansing of Palestine.</em></a>
+                    <p class="ref-note">يوظف في المدخل العام لفهم النكبة والاقتلاع الجماعي بوصفهما جزءًا بنيويًا من نشأة المسألة الفلسطينية.</p>
+                <button type="button" class="ref-copy-btn">نسخ</button></article><article class="ref-item" id="ref9" data-category="political" data-year="2011" data-copy-text="Roy, S. (2011). Hamas and Civil Society in Gaza: Engaging the Islamist Social Sector. https://press.princeton.edu/books/paperback/9780691154503/hamas-and-civil-society-in-gaza">
+                    <div class="ref-item-head">
+                        <span class="ref-index">09</span>
+                        <div class="ref-badges">
+                            <span class="ref-badge">سياقي</span>
+                            <span class="ref-badge">أكاديمي</span>
+                        </div>
+                    </div>
+                    <strong>Roy, S. (2011).</strong>
+                    <a href="https://press.princeton.edu/books/paperback/9780691154503/hamas-and-civil-society-in-gaza" target="_blank" rel="noopener noreferrer" class="ref-link"><em>Hamas and Civil Society in Gaza: Engaging the Islamist Social Sector.</em></a>
+                    <p class="ref-note">يفيد في فهم البيئة الاجتماعية والسياسية في غزة، وهو أنسب من المراجع العامة عند ربط الشخصية بالبنية الحركية في القطاع.</p>
+                <button type="button" class="ref-copy-btn">نسخ</button></article><article class="ref-item" id="ref10" data-category="humanitarian" data-year="2024" data-copy-text="UNRWA. (2024). About UNRWA: Fact Sheet. https://www.unrwa.org/sites/default/files/about_unrwa_fact_sheet_v1.pdf">
+                    <div class="ref-item-head">
+                        <span class="ref-index">10</span>
+                        <div class="ref-badges">
+                            <span class="ref-badge">لاجئون</span>
+                            <span class="ref-badge">أممي</span>
+                        </div>
+                    </div>
+                    <strong>UNRWA. (2024).</strong>
+                    <a href="https://www.unrwa.org/sites/default/files/about_unrwa_fact_sheet_v1.pdf" target="_blank" rel="noopener noreferrer" class="ref-link"><em>About UNRWA: Fact Sheet.</em></a>
+                    <p class="ref-note">يدعم الفقرة المتعلقة باللجوء واستمرار قضية اللاجئين الفلسطينيين ضمن المتابعة الأممية والمؤسساتية.</p>
+                <button type="button" class="ref-copy-btn">نسخ</button></article><article class="ref-item" id="ref11" data-category="economy" data-year="2024" data-copy-text="World Bank. (2024). World Bank Economic Monitoring Report: Impacts of the Conflict in the Middle East on the Palestinian Economy. https://thedocs.worldbank.org/en/doc/db985000fa4b7237616dbca501d674dc-0280012024/original/Palestinian-Economic-Monitoring-Report-Sept24-Final.pdf">
+                    <div class="ref-item-head">
+                        <span class="ref-index">11</span>
+                        <div class="ref-badges">
+                            <span class="ref-badge">اقتصادي</span>
+                            <span class="ref-badge">تنموي</span>
+                        </div>
+                    </div>
+                    <strong>World Bank. (2024).</strong>
+                    <a href="https://thedocs.worldbank.org/en/doc/db985000fa4b7237616dbca501d674dc-0280012024/original/Palestinian-Economic-Monitoring-Report-Sept24-Final.pdf" target="_blank" rel="noopener noreferrer" class="ref-link"><em>World Bank Economic Monitoring Report: Impacts of the Conflict in the Middle East on the Palestinian Economy.</em></a>
+                    <p class="ref-note">يسند الحديث عن الحصار والأثر الاقتصادي وتدهور القدرة على العيش والإنتاج داخل غزة والضفة الغربية.</p>
+                <button type="button" class="ref-copy-btn">نسخ</button></article><article class="ref-item" id="ref12" data-category="history" data-year="2020" data-copy-text="United Nations. (2020). Origins and Evolution of the Palestine Problem. https://www.un.org/unispal/history2/origins-and-evolution-of-the-palestine-problem/">
+                    <div class="ref-item-head">
+                        <span class="ref-index">12</span>
+                        <div class="ref-badges">
+                            <span class="ref-badge">أممي</span>
+                            <span class="ref-badge">مرجع تأسيسي</span>
+                        </div>
+                    </div>
+                    <strong>United Nations. (2020).</strong>
+                    <a href="https://www.un.org/unispal/history2/origins-and-evolution-of-the-palestine-problem/" target="_blank" rel="noopener noreferrer" class="ref-link"><em>Origins and Evolution of the Palestine Problem.</em></a>
+                    <p class="ref-note">مرجع تأسيسي من منظومة الأمم المتحدة يثبّت الخلفية التاريخية الممتدة للقضية من بداياتها حتى تحولاتها الدولية.</p>
+                <button type="button" class="ref-copy-btn">نسخ</button></article><article class="ref-item" id="ref13" data-category="law" data-year="2016" data-copy-text="United Nations Security Council. (2016). Resolution 2334 (2016): Illegality of Israeli Settlements in Palestinian Territory Occupied Since 1967. https://www.un.org/unispal/document/unsc-resolution-2334-illegality-israeli-settlements/">
+                    <div class="ref-item-head">
+                        <span class="ref-index">13</span>
+                        <div class="ref-badges">
+                            <span class="ref-badge">قرار أممي</span>
+                            <span class="ref-badge">قانوني</span>
+                        </div>
+                    </div>
+                    <strong>United Nations Security Council. (2016).</strong>
+                    <a href="https://www.un.org/unispal/document/unsc-resolution-2334-illegality-israeli-settlements/" target="_blank" rel="noopener noreferrer" class="ref-link"><em>Resolution 2334 (2016): Illegality of Israeli Settlements in Palestinian Territory Occupied Since 1967.</em></a>
+                    <p class="ref-note">يعزز الإطار القانوني في البحث، خصوصًا ما يتعلق بعدم شرعية الاستيطان وأثره على حل الدولتين والقانون الدولي.</p>
+                <button type="button" class="ref-copy-btn">نسخ</button></article><article class="ref-item" id="ref14" data-category="economy" data-year="2024" data-copy-text="International Labour Organization and Palestinian Central Bureau of Statistics. (2024). A Year of War in Gaza: Impacts on Employment and Livelihoods in the West Bank and Gaza Strip. https://www.ilo.org/publications/year-war-gaza-impacts-employment-and-livelihoods-west-bank-and-gaza-strip">
+                    <div class="ref-item-head">
+                        <span class="ref-index">14</span>
+                        <div class="ref-badges">
+                            <span class="ref-badge">اقتصادي</span>
+                            <span class="ref-badge">سوق العمل</span>
+                        </div>
+                    </div>
+                    <strong>International Labour Organization &amp; PCBS. (2024).</strong>
+                    <a href="https://www.ilo.org/publications/year-war-gaza-impacts-employment-and-livelihoods-west-bank-and-gaza-strip" target="_blank" rel="noopener noreferrer" class="ref-link"><em>A Year of War in Gaza: Impacts on Employment and Livelihoods in the West Bank and Gaza Strip.</em></a>
+                    <p class="ref-note">يربط بين الحرب وسوق العمل وسبل العيش والفقر وتراجع النشاط الاقتصادي، وهو مفيد لتقوية المنظور الاجتماعي الاقتصادي.</p>
+                <button type="button" class="ref-copy-btn">نسخ</button></article><article class="ref-item" id="ref15" data-category="humanitarian" data-year="2024" data-copy-text="United Nations OCHA. (2024). Reported impact snapshot | Gaza Strip (22 October 2024). https://www.ochaopt.org/content/reported-impact-snapshot-gaza-strip-22-october-2024">
+                    <div class="ref-item-head">
+                        <span class="ref-index">15</span>
+                        <div class="ref-badges">
+                            <span class="ref-badge">إنساني</span>
+                            <span class="ref-badge">بيانات ميدانية</span>
+                        </div>
+                    </div>
+                    <strong>United Nations OCHA. (2024).</strong>
+                    <a href="https://www.ochaopt.org/content/reported-impact-snapshot-gaza-strip-22-october-2024" target="_blank" rel="noopener noreferrer" class="ref-link"><em>Reported impact snapshot | Gaza Strip (22 October 2024).</em></a>
+                    <p class="ref-note">يوفر لقطة كمية سريعة عن الخسائر والوضع الإنساني والخدمات، ويمنح القسم الميداني في البحث سندًا رقميًا مباشرًا.</p>
+                <button type="button" class="ref-copy-btn">نسخ</button></article></div>
+        </section>
+    </main>
+</div>
+
+<!-- تذييل بسيط -->
+<footer style="text-align:center; padding:30px; font-family:'Tajawal', sans-serif; color:var(--text-light); border-top:1px solid var(--border); background:var(--bg-site);">
+    <p>📚 بحث أكاديمي ضمن متطلبات مقرر المواطنة العالمية (G_STUDIES) - جامعة السلطان قابوس</p>
+    <p>جميع الحقوق محفوظة © 2026 بدر عبدالله هلال البوسعيدي</p>
+</footer>
+
+<script type="application/json" data-legacy-disabled="true">
+    // 1. شريط التقدم
+    window.onscroll = function() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("progressBar").style.width = scrolled + "%";
+
+        // إظهار زر العودة للأعلى
+        var backBtn = document.getElementById("backToTop");
+        if (winScroll > 300) backBtn.classList.add("show");
+        else backBtn.classList.remove("show");
+    };
+
+    // 2. العودة للأعلى
+    document.getElementById("backToTop").addEventListener("click", function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // 3. الوضع الليلي مع حفظ التفضيل
+    function toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+        var icon = document.getElementById('themeIcon');
+        if (document.body.classList.contains('dark-mode')) {
+            icon.classList.replace('fa-moon', 'fa-sun');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            icon.classList.replace('fa-sun', 'fa-moon');
+            localStorage.setItem('theme', 'light');
+        }
+    }
+
+    // استعادة الوضع المحفوظ
+    (function loadTheme() {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'dark') {
+            document.body.classList.add('dark-mode');
+            document.getElementById('themeIcon').classList.replace('fa-moon', 'fa-sun');
+        }
+    })();
+
+    document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+
+    // 4. مشاركة الصفحة
+    document.getElementById('shareBtn').addEventListener('click', function() {
+        if (navigator.share) {
+            navigator.share({
+                title: 'البحث الأكاديمي: القضية الفلسطينية',
+                text: 'دراسة تحليلية في إطار المواطنة العالمية.',
+                url: window.location.href,
+            }).catch(console.error);
+        } else {
+            alert('يمكنك نسخ الرابط من شريط العنوان لمشاركته');
+        }
+    });
+
+    // 5. تأثيرات الظهور (reveal)
+    function revealElements() {
+        var reveals = document.querySelectorAll('.reveal');
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 100;
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add('active');
+            }
+        }
+    }
+    window.addEventListener('scroll', revealElements);
+    revealElements();
+
+    // 6. تظليل الرابط النشط في السايدبار
+    const sections = document.querySelectorAll('.content-section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 200;
+            if (window.scrollY >= sectionTop) {
+                current = section.getAttribute('id');
+            }
+        });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(current)) {
+                link.classList.add('active');
+            }
+        });
+    });
+
+    // 7. وظيفة رفع الصور
+    window.loadImage = function(event, placeholderId) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            var placeholder = document.getElementById(placeholderId);
+            placeholder.innerHTML = '<img src="' + reader.result + '" style="width:100%; max-height:400px; object-fit:contain; border-radius:8px; display:block; margin:0 auto;">';
+            placeholder.style.background = 'transparent';
+            placeholder.style.padding = '0';
+        };
+        if (event.target.files[0]) {
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    };
+
+    function injectDefaultFigure(placeholderId, imagePath, altText) {
+        var placeholder = document.getElementById(placeholderId);
+        if (!placeholder) return;
+
+        placeholder.innerHTML = '<img src="' + imagePath + '" alt="' + altText + '" style="width:100%; max-height:400px; object-fit:contain; border-radius:8px; display:block; margin:0 auto;">';
+        placeholder.style.background = 'transparent';
+        placeholder.style.padding = '0';
+    }
+
+    (function loadDefaultFigures() {
+        injectDefaultFigure('ph-1', 'map.png', 'خريطة تاريخية لفلسطين');
+        injectDefaultFigure('ph-2', 'refugees.jpg', 'صورة للاجئين الفلسطينيين');
+        injectDefaultFigure('ph-3', 'economy.jpg', 'مؤشرات اقتصادية للوضع الفلسطيني');
+        injectDefaultFigure('ph-4', 'un.jpg', 'جلسة في الأمم المتحدة');
+        injectDefaultFigure('ph-5', 'sinwar.jpg', 'صورة أرشيفية ليحيى السنوار');
+        injectDefaultFigure('ph-6', 'march.jpg', 'مشهد من المسيرات في غزة');
+    })();
+</script>
+
+<script src="script.js"></script>
+
+
+
+</body></html>
